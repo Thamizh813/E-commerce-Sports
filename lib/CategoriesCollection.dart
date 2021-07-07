@@ -23,14 +23,16 @@ class CategoriesCollection extends StatelessWidget {
                 },
                 child: new Padding(
                   padding: const EdgeInsets.all(9.0),
-                  child: new Column(
-                    children: <Widget>[
-                      new Icon(Icons.local_offer, color: Colors.white),
-                      new Padding(padding: new EdgeInsets.only(bottom: 2.0)),
-                      new Text("Offers",
-                          textAlign: TextAlign.center,
-                          style: new TextStyle(color: Colors.white)),
-                    ],
+                  child: SingleChildScrollView(
+                    child: new Column(
+                      children: <Widget>[
+                        new Icon(Icons.local_offer, color: Colors.white),
+                        new Padding(padding: new EdgeInsets.only(bottom: 2.0)),
+                        new Text("Offers",
+                            textAlign: TextAlign.center,
+                            style: new TextStyle(color: Colors.white)),
+                      ],
+                    ),
                   ),
                 )),
           ),
@@ -43,14 +45,16 @@ class CategoriesCollection extends StatelessWidget {
               },
               child: new Padding(
                 padding: const EdgeInsets.all(9.0),
-                child: new Column(
-                  children: <Widget>[
-                    new Icon(Icons.phone_iphone, color: Colors.white),
-                    new Padding(padding: new EdgeInsets.only(bottom: 2.0)),
-                    new Text("Mobiles",
-                        textAlign: TextAlign.center,
-                        style: new TextStyle(color: Colors.white)),
-                  ],
+                child: SingleChildScrollView(
+                  child: new Column(
+                    children: <Widget>[
+                      new Icon(Icons.phone_iphone, color: Colors.white),
+                      new Padding(padding: new EdgeInsets.only(bottom: 2.0)),
+                      new Text("Mobiles",
+                          textAlign: TextAlign.center,
+                          style: new TextStyle(color: Colors.white)),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -64,14 +68,16 @@ class CategoriesCollection extends StatelessWidget {
               },
               child: new Padding(
                 padding: const EdgeInsets.all(9.0),
-                child: new Column(
-                  children: <Widget>[
-                    new Icon(Icons.laptop_mac, color: Colors.white),
-                    new Padding(padding: new EdgeInsets.only(bottom: 2.0)),
-                    new Text("Laptops",
-                        textAlign: TextAlign.center,
-                        style: new TextStyle(color: Colors.white)),
-                  ],
+                child: SingleChildScrollView(
+                  child: new Column(
+                    children: <Widget>[
+                      new Icon(Icons.laptop_mac, color: Colors.white),
+                      new Padding(padding: new EdgeInsets.only(bottom: 2.0)),
+                      new Text("Laptops",
+                          textAlign: TextAlign.center,
+                          style: new TextStyle(color: Colors.white)),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -85,14 +91,16 @@ class CategoriesCollection extends StatelessWidget {
               },
               child: new Padding(
                 padding: const EdgeInsets.all(9.0),
-                child: new Column(
-                  children: <Widget>[
-                    new Icon(Icons.more, color: Colors.white),
-                    new Padding(padding: new EdgeInsets.only(bottom: 2.0)),
-                    new Text("More",
-                        textAlign: TextAlign.center,
-                        style: new TextStyle(color: Colors.white)),
-                  ],
+                child: SingleChildScrollView(
+                  child: new Column(
+                    children: <Widget>[
+                      new Icon(Icons.more, color: Colors.white),
+                      new Padding(padding: new EdgeInsets.only(bottom: 2.0)),
+                      new Text("More",
+                          textAlign: TextAlign.center,
+                          style: new TextStyle(color: Colors.white)),
+                    ],
+                  ),
                 ),
               ),
             ),

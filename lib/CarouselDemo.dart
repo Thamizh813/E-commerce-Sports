@@ -32,7 +32,7 @@ class _CarouselDemoState extends State<CarouselDemo> {
           decoration: new BoxDecoration(
               borderRadius: new BorderRadius.all(new Radius.circular(5.0)),
               image: new DecorationImage(
-                fit: BoxFit.cover,
+                fit: BoxFit.fill,
                 image: new CachedNetworkImageProvider(
                   url,
                 ),
