@@ -13,14 +13,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Choice _selectedChoice = choices[0]; // The app's "state".
+  // Choice _selectedChoice = choices[0]; // The app's "state".
 
-  void _select(Choice choice) {
-    // Causes the app to rebuild with the new _selectedChoice.
-    setState(() {
-      _selectedChoice = choice;
-    });
-  }
+  // void _select(Choice choice) {
+  //   // Causes the app to rebuild with the new _selectedChoice.
+  //   setState(() {
+  //     _selectedChoice = choice;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +33,9 @@ class _MyAppState extends State<MyApp> {
                 : Colors.blue), //Theme Data
         home: new HomePage(),
         routes: <String, WidgetBuilder>{
-          "/electronics": (BuildContext context) => NewPage('Electronics'),
-          "/b": (BuildContext context) => NewPage('Lifestyle'),
-          "/notifications": (BuildContext context) => NewPage('notifications'),
+          "/notifications": (BuildContext context) => NewPage('Notifications'),
+          "/cart": (BuildContext context) => NewPage('Cart'),
+          "/account": (BuildContext context) => NewPage('Account'),
         }); //Material App
   }
 }
@@ -77,21 +77,25 @@ class HomePage extends StatelessWidget {
           new IconButton(
               icon: new Icon(choices[0].icon),
               onPressed: () {
-                Navigator.of(context).pushNamed("/electronics");
+                Navigator.of(context).pushNamed("/notifications");
               }),
           new IconButton(
               icon: new Icon(choices[1].icon),
               onPressed: () {
-                Navigator.of(context).pushNamed("/notifications");
+                Navigator.of(context).pushNamed("/cart");
               }),
-          new IconButton(icon: new Icon(choices[2].icon), onPressed: () {}),
+          new IconButton(
+              icon: new Icon(choices[2].icon),
+              onPressed: () {
+                Navigator.of(context).pushNamed("/account");
+              }),
         ],
       ), //AppBar
       drawer: new Drawer(
         child: new ListView(
           children: <Widget>[
             new UserAccountsDrawerHeader(
-              accountName: new Text('Nitin Mehta',
+              accountName: new Text('E-commerce Sports',
                   style: new TextStyle(
                       fontSize: 18.0, fontWeight: FontWeight.bold)),
               accountEmail: new Text('developer.account@gmail.com',
@@ -115,8 +119,8 @@ class HomePage extends StatelessWidget {
               title: new Text('Electronics'),
               leading: new Icon(Icons.phone_iphone),
               onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).pushNamed("/a");
+                // Navigator.of(context).pop();
+                Navigator.of(context).pushNamed("/notifications");
               },
             ), //List Tile 1
             new ListTile(
@@ -124,50 +128,59 @@ class HomePage extends StatelessWidget {
               leading: new Icon(Icons.face),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).pushNamed("/b");
+                Navigator.of(context).pushNamed("/notifications");
               },
             ), //List Tile 2
             new ListTile(
               title: new Text('TVs and Appliances'),
               leading: new Icon(Icons.home),
+              onTap: () {},
             ), //List Tile 3
             new ListTile(
               title: new Text('Sports, Books & More'),
               leading: new Icon(Icons.store),
+              onTap: () {},
             ), //List 4
             new ListTile(
               title: new Text('Offer Zone'),
               leading: new Icon(Icons.local_offer),
+              onTap: () {},
             ), //List Tile 5
             new ListTile(
               title: new Text('My Cart'),
               leading: new Icon(Icons.shopping_cart),
+              onTap: () {},
             ), //List Tile 6
             new ListTile(
               title: new Text('My Wishlist'),
               leading: new Icon(Icons.favorite),
+              onTap: () {},
             ), //List Tile 7
             new ListTile(
               title: new Text('My Orders'),
               leading: new Icon(Icons.account_balance_wallet),
+              onTap: () {},
             ), //List Tile 8
             new ListTile(
               title: new Text('My Account'),
               leading: new Icon(Icons.account_box),
+              onTap: () {},
             ), //List Tile 9
             new ListTile(
               title: new Text('Logout'),
               leading: new Icon(Icons.remove_circle_outline),
+              onTap: () {},
             ),
             new ListTile(
               title: new Text('About us'),
               leading: new Icon(Icons.info),
+              onTap: () {},
             ), //List Tile 10
           ],
           padding: EdgeInsets.zero,
         ), //parent ListView
       ), //parent Drawer
-      body: new feed_body(), //Feed body
+      body: new Feed_body(), //Feed body
     ); //Scaffold
   }
 }

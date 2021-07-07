@@ -1,7 +1,7 @@
 import 'package:bat/FeedWidgetList.dart';
 import 'package:flutter/material.dart';
 
-class feed_body extends StatelessWidget {
+class Feed_body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Column(
