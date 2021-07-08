@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:bat/feed_body.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -74,6 +76,21 @@ class HomePage extends StatelessWidget {
 
         iconTheme: new IconThemeData(color: Colors.white),
         actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(top: 15, bottom: 15),
+            child: TextButton(
+              onPressed: () {},
+              child: Text(
+                "Sign In",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
           new IconButton(
               icon: new Icon(choices[0].icon),
               onPressed: () {
