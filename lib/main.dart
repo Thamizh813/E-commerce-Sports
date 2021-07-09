@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:bat/feed_body.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +60,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: new AppBar(
         titleSpacing: -2.0,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.red[400],
         elevation: 0.0,
         title: new Text('Shoppy',
             style: new TextStyle(
@@ -108,96 +106,107 @@ class HomePage extends StatelessWidget {
               }),
         ],
       ), //AppBar
-      drawer: new Drawer(
-        child: new ListView(
-          children: <Widget>[
-            new UserAccountsDrawerHeader(
-              accountName: new Text('E-commerce Sports',
-                  style: new TextStyle(
-                      fontSize: 18.0, fontWeight: FontWeight.bold)),
-              accountEmail: new Text('developer.account@gmail.com',
-                  style: new TextStyle(
-                      fontSize: 15.0, fontWeight: FontWeight.normal)),
-              currentAccountPicture: new CircleAvatar(
-                backgroundColor: Colors.red[800],
-                child: new Icon(
-                  Icons.account_circle,
-                  size: 50.0,
-                  color: Colors.white,
-                ),
-              ), //Circle Avatar
-            ), //UserAccount drawer header parent box
-            new Divider(
-                height: defaultTargetPlatform == TargetPlatform.iOS ? 5.0 : 0.0,
-                color: defaultTargetPlatform == TargetPlatform.iOS
-                    ? Colors.grey
-                    : Colors.white), //
-            new ListTile(
-              title: new Text('Electronics'),
-              leading: new Icon(Icons.phone_iphone),
-              onTap: () {
-                // Navigator.of(context).pop();
-                Navigator.of(context).pushNamed("/notifications");
-              },
-            ), //List Tile 1
-            new ListTile(
-              title: new Text('Lifestyle'),
-              leading: new Icon(Icons.face),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).pushNamed("/notifications");
-              },
-            ), //List Tile 2
-            new ListTile(
-              title: new Text('TVs and Appliances'),
-              leading: new Icon(Icons.home),
-              onTap: () {},
-            ), //List Tile 3
-            new ListTile(
-              title: new Text('Sports, Books & More'),
-              leading: new Icon(Icons.store),
-              onTap: () {},
-            ), //List 4
-            new ListTile(
-              title: new Text('Offer Zone'),
-              leading: new Icon(Icons.local_offer),
-              onTap: () {},
-            ), //List Tile 5
-            new ListTile(
-              title: new Text('My Cart'),
-              leading: new Icon(Icons.shopping_cart),
-              onTap: () {},
-            ), //List Tile 6
-            new ListTile(
-              title: new Text('My Wishlist'),
-              leading: new Icon(Icons.favorite),
-              onTap: () {},
-            ), //List Tile 7
-            new ListTile(
-              title: new Text('My Orders'),
-              leading: new Icon(Icons.account_balance_wallet),
-              onTap: () {},
-            ), //List Tile 8
-            new ListTile(
-              title: new Text('My Account'),
-              leading: new Icon(Icons.account_box),
-              onTap: () {},
-            ), //List Tile 9
-            new ListTile(
-              title: new Text('Logout'),
-              leading: new Icon(Icons.remove_circle_outline),
-              onTap: () {},
-            ),
-            new ListTile(
-              title: new Text('About us'),
-              leading: new Icon(Icons.info),
-              onTap: () {},
-            ), //List Tile 10
-          ],
-          padding: EdgeInsets.zero,
-        ), //parent ListView
-      ), //parent Drawer
+      drawer: Draw(),
+
+      //parent Drawer
       body: new Feed_body(), //Feed body
     ); //Scaffold
+  }
+}
+
+class Draw extends StatelessWidget {
+  const Draw({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return new Drawer(
+      child: new ListView(
+        children: <Widget>[
+          new UserAccountsDrawerHeader(
+            accountName: new Text('E-commerce Sports',
+                style:
+                    new TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold)),
+            accountEmail: new Text('developer.account@gmail.com',
+                style: new TextStyle(
+                    fontSize: 15.0, fontWeight: FontWeight.normal)),
+            currentAccountPicture: new CircleAvatar(
+              backgroundColor: Colors.red[800],
+              child: new Icon(
+                Icons.account_circle,
+                size: 50.0,
+                color: Colors.white,
+              ),
+            ), //Circle Avatar
+          ), //UserAccount drawer header parent box
+          new Divider(
+              height: defaultTargetPlatform == TargetPlatform.iOS ? 5.0 : 0.0,
+              color: defaultTargetPlatform == TargetPlatform.iOS
+                  ? Colors.grey
+                  : Colors.white), //
+          new ListTile(
+            title: new Text('Electronics'),
+            leading: new Icon(Icons.phone_iphone),
+            onTap: () {
+              // Navigator.of(context).pop();
+              Navigator.of(context).pushNamed("/notifications");
+            },
+          ), //List Tile 1
+          new ListTile(
+            title: new Text('Lifestyle'),
+            leading: new Icon(Icons.face),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).pushNamed("/notifications");
+            },
+          ), //List Tile 2
+          new ListTile(
+            title: new Text('TVs and Appliances'),
+            leading: new Icon(Icons.home),
+            onTap: () {},
+          ), //List Tile 3
+          new ListTile(
+            title: new Text('Sports, Books & More'),
+            leading: new Icon(Icons.store),
+            onTap: () {},
+          ), //List 4
+          new ListTile(
+            title: new Text('Offer Zone'),
+            leading: new Icon(Icons.local_offer),
+            onTap: () {},
+          ), //List Tile 5
+          new ListTile(
+            title: new Text('My Cart'),
+            leading: new Icon(Icons.shopping_cart),
+            onTap: () {},
+          ), //List Tile 6
+          new ListTile(
+            title: new Text('My Wishlist'),
+            leading: new Icon(Icons.favorite),
+            onTap: () {},
+          ), //List Tile 7
+          new ListTile(
+            title: new Text('My Orders'),
+            leading: new Icon(Icons.account_balance_wallet),
+            onTap: () {},
+          ), //List Tile 8
+          new ListTile(
+            title: new Text('My Account'),
+            leading: new Icon(Icons.account_box),
+            onTap: () {},
+          ), //List Tile 9
+          new ListTile(
+            title: new Text('Logout'),
+            leading: new Icon(Icons.remove_circle_outline),
+            onTap: () {},
+          ),
+          new ListTile(
+            title: new Text('About us'),
+            leading: new Icon(Icons.info),
+            onTap: () {},
+          ), //List Tile 10
+        ],
+        padding: EdgeInsets.zero,
+      ), //parent ListView
+    );
   }
 }
