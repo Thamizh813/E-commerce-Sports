@@ -5,6 +5,7 @@ class Single_brand_promotion extends StatelessWidget {
   Widget build(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
     return new Container(
+      color: Colors.black,
       width: deviceSize.width,
       child: new FlatButton(
         onPressed: () {

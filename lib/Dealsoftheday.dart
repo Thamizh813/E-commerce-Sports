@@ -7,13 +7,16 @@ class Dealsoftheday extends StatelessWidget {
 
     return new Container(
       height: 300.0,
+      color: Colors.black,
       width: deviceSize.width,
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           new Padding(
-              padding: new EdgeInsets.only(top: 1.0, bottom: 6.0),
+              padding: new EdgeInsets.only(
+                top: 0.0,
+              ),
               child: new Row(
                 children: [
                   new Expanded(

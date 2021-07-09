@@ -33,9 +33,7 @@ class _CarouselDemoState extends State<CarouselDemo> {
               borderRadius: new BorderRadius.all(new Radius.circular(5.0)),
               image: new DecorationImage(
                 fit: BoxFit.fill,
-                image: new CachedNetworkImageProvider(
-                  url,
-                ),
+                image: new CachedNetworkImageProvider(url, maxHeight: 400),
               )),
         );
       }).toList(),
@@ -43,7 +41,7 @@ class _CarouselDemoState extends State<CarouselDemo> {
         viewportFraction: 0.9,
         aspectRatio: 2.0,
         autoPlay: false,
-        height: 210.0,
+        height: 500.0,
       ),
     );
     return new ListView(

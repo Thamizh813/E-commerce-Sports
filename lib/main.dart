@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: new AppBar(
         titleSpacing: -2.0,
-        backgroundColor: Colors.red[400],
+        backgroundColor: Colors.black,
         elevation: 0.0,
         title: new Text('Shoppy',
             style: new TextStyle(

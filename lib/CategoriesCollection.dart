@@ -5,30 +5,31 @@ class CategoriesCollection extends StatelessWidget {
   Widget build(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
     return new Container(
-      alignment: Alignment.center,
-      width: deviceSize.width,
-      color: Colors.red[400],
-      height: deviceSize.height * 0.08,
+      alignment: Alignment.centerLeft,
+      width: 1000,
+      color: Colors.black,
+      height: deviceSize.height * 0.1,
       child: new ListView(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           new Container(
-            alignment: Alignment.bottomCenter,
+            alignment: Alignment.centerLeft,
             height: 90.0,
-            color: Colors.red[400],
+            color: Colors.black,
             child: new FlatButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed("/notifications");
                 },
                 child: new Padding(
-                  padding: const EdgeInsets.all(9.0),
+                  padding: const EdgeInsets.only(
+                      top: 12, bottom: 12, left: 100, right: 70),
                   child: SingleChildScrollView(
                     child: new Column(
                       children: <Widget>[
-                        new Icon(Icons.local_offer, color: Colors.white),
-                        new Padding(padding: new EdgeInsets.only(bottom: 2.0)),
-                        new Text("Offers",
+                        new Icon(Icons.home, color: Colors.white),
+                        new Padding(padding: new EdgeInsets.only(bottom: 3.0)),
+                        new Text("Home",
                             textAlign: TextAlign.center,
                             style: new TextStyle(color: Colors.white)),
                       ],
@@ -38,19 +39,20 @@ class CategoriesCollection extends StatelessWidget {
           ),
           new Container(
             alignment: Alignment.center,
-            color: Colors.red[400],
+            color: Colors.black,
             child: new FlatButton(
               onPressed: () {
                 Navigator.of(context).pushNamed("/notifications");
               },
               child: new Padding(
-                padding: const EdgeInsets.all(9.0),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 12, horizontal: 70),
                 child: SingleChildScrollView(
                   child: new Column(
                     children: <Widget>[
-                      new Icon(Icons.phone_iphone, color: Colors.white),
+                      new Icon(Icons.shopping_bag_rounded, color: Colors.white),
                       new Padding(padding: new EdgeInsets.only(bottom: 2.0)),
-                      new Text("Mobiles",
+                      new Text("Clothing",
                           textAlign: TextAlign.center,
                           style: new TextStyle(color: Colors.white)),
                     ],
@@ -61,19 +63,20 @@ class CategoriesCollection extends StatelessWidget {
           ),
           new Container(
             alignment: Alignment.center,
-            color: Colors.red[400],
+            color: Colors.black,
             child: new FlatButton(
               onPressed: () {
                 Navigator.of(context).pushNamed("/notifications");
               },
               child: new Padding(
-                padding: const EdgeInsets.all(9.0),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 12, horizontal: 70),
                 child: SingleChildScrollView(
                   child: new Column(
                     children: <Widget>[
-                      new Icon(Icons.laptop_mac, color: Colors.white),
+                      new Icon(Icons.sports_football, color: Colors.white),
                       new Padding(padding: new EdgeInsets.only(bottom: 2.0)),
-                      new Text("Laptops",
+                      new Text("sports",
                           textAlign: TextAlign.center,
                           style: new TextStyle(color: Colors.white)),
                     ],
@@ -84,19 +87,20 @@ class CategoriesCollection extends StatelessWidget {
           ),
           new Container(
             alignment: Alignment.center,
-            color: Colors.red[400],
+            color: Colors.black,
             child: new FlatButton(
               onPressed: () {
                 Navigator.of(context).pushNamed("/cart");
               },
               child: new Padding(
-                padding: const EdgeInsets.all(9.0),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 12, horizontal: 70),
                 child: SingleChildScrollView(
                   child: new Column(
                     children: <Widget>[
-                      new Icon(Icons.more, color: Colors.white),
+                      new Icon(Icons.outlet, color: Colors.white),
                       new Padding(padding: new EdgeInsets.only(bottom: 2.0)),
-                      new Text("More",
+                      new Text("Outlet",
                           textAlign: TextAlign.center,
                           style: new TextStyle(color: Colors.white)),
                     ],
