@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: new AppBar(
         titleSpacing: -2.0,
-        backgroundColor: Colors.red[400],
+        backgroundColor: Colors.black,
         elevation: 0.0,
         title: new Text('Shoppy',
             style: new TextStyle(
@@ -108,7 +108,6 @@ class HomePage extends StatelessWidget {
       ), //AppBar
       drawer: Draw(),
 
-      //parent Drawer
       body: new Feed_body(), //Feed body
     ); //Scaffold
   }
@@ -123,14 +122,21 @@ class Draw extends StatelessWidget {
       child: new ListView(
         children: <Widget>[
           new UserAccountsDrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.white,
+            ),
             accountName: new Text('E-commerce Sports',
-                style:
-                    new TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold)),
+                style: new TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black)),
             accountEmail: new Text('developer.account@gmail.com',
                 style: new TextStyle(
-                    fontSize: 15.0, fontWeight: FontWeight.normal)),
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.black)),
             currentAccountPicture: new CircleAvatar(
-              backgroundColor: Colors.red[800],
+              backgroundColor: Colors.black,
               child: new Icon(
                 Icons.account_circle,
                 size: 50.0,
@@ -143,29 +149,29 @@ class Draw extends StatelessWidget {
               color: defaultTargetPlatform == TargetPlatform.iOS
                   ? Colors.grey
                   : Colors.white), //
+          // new ListTile(
+          //   title: new Text('Electronics'),
+          //   leading: new Icon(Icons.phone_iphone),
+          //   onTap: () {
+          //     // Navigator.of(context).pop();
+          //     Navigator.of(context).pushNamed("/notifications");
+          //   },
+          // ), //List Tile 1
+          // new ListTile(
+          //   title: new Text('Lifestyle'),
+          //   leading: new Icon(Icons.face),
+          //   onTap: () {
+          //     Navigator.of(context).pop();
+          //     Navigator.of(context).pushNamed("/notifications");
+          //   },
+          // ), //List Tile 2
           new ListTile(
-            title: new Text('Electronics'),
-            leading: new Icon(Icons.phone_iphone),
-            onTap: () {
-              // Navigator.of(context).pop();
-              Navigator.of(context).pushNamed("/notifications");
-            },
-          ), //List Tile 1
-          new ListTile(
-            title: new Text('Lifestyle'),
-            leading: new Icon(Icons.face),
-            onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).pushNamed("/notifications");
-            },
-          ), //List Tile 2
-          new ListTile(
-            title: new Text('TVs and Appliances'),
-            leading: new Icon(Icons.home),
+            title: new Text('Clothings'),
+            leading: new Icon(Icons.shopping_cart_outlined),
             onTap: () {},
           ), //List Tile 3
           new ListTile(
-            title: new Text('Sports, Books & More'),
+            title: new Text('Sports'),
             leading: new Icon(Icons.store),
             onTap: () {},
           ), //List 4
@@ -179,11 +185,11 @@ class Draw extends StatelessWidget {
             leading: new Icon(Icons.shopping_cart),
             onTap: () {},
           ), //List Tile 6
-          new ListTile(
-            title: new Text('My Wishlist'),
-            leading: new Icon(Icons.favorite),
-            onTap: () {},
-          ), //List Tile 7
+          // new ListTile(
+          //   title: new Text('My Wishlist'),
+          //   leading: new Icon(Icons.favorite),
+          //   onTap: () {},
+          // ), //List Tile 7
           new ListTile(
             title: new Text('My Orders'),
             leading: new Icon(Icons.account_balance_wallet),

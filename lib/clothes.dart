@@ -5,18 +5,11 @@ import 'package:bat/home/women.dart';
 import 'package:bat/main.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: ClothingPage(),
-  ));
-}
-
 class ClothingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text(
@@ -35,16 +28,13 @@ class ClothingPage extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 700),
-              child: Text(
-                "All Clothing",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 35,
-                    fontFamily: 'raleway'),
-              ),
+            Text(
+              "Kids Clothing",
+              style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 35,
+                  fontFamily: 'raleway'),
             ),
             SizedBox(
               height: 30,
@@ -53,16 +43,13 @@ class ClothingPage extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 700),
-              child: Text(
-                "Men Clothing",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 35,
-                    fontFamily: 'raleway'),
-              ),
+            Text(
+              "Men Clothing",
+              style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 35,
+                  fontFamily: 'raleway'),
             ),
             SizedBox(
               height: 30,
@@ -71,16 +58,13 @@ class ClothingPage extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 700),
-              child: Text(
-                "Women Clothing",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 35,
-                    fontFamily: 'raleway'),
-              ),
+            Text(
+              "Women Clothing",
+              style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 35,
+                  fontFamily: 'raleway'),
             ),
             SizedBox(
               height: 30,
@@ -89,16 +73,13 @@ class ClothingPage extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 700),
-              child: Text(
-                "Shoes",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 35,
-                    fontFamily: 'raleway'),
-              ),
+            Text(
+              "Shoes",
+              style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 35,
+                  fontFamily: 'raleway'),
             ),
             SizedBox(
               height: 30,
@@ -134,7 +115,7 @@ class AllCloth extends StatelessWidget {
                       builder: (BuildContext context) {
                         return Container(
                           margin: EdgeInsets.symmetric(
-                              vertical: 100, horizontal: 300),
+                              vertical: 100, horizontal: 392),
                           height: 100,
                           width: 100,
                           decoration: BoxDecoration(
@@ -374,7 +355,7 @@ class Men extends StatelessWidget {
                       builder: (BuildContext context) {
                         return Container(
                           margin: EdgeInsets.symmetric(
-                              vertical: 100, horizontal: 300),
+                              vertical: 100, horizontal: 392),
                           height: 100,
                           width: 100,
                           decoration: BoxDecoration(
@@ -614,7 +595,7 @@ class Women extends StatelessWidget {
                       builder: (BuildContext context) {
                         return Container(
                           margin: EdgeInsets.symmetric(
-                              vertical: 100, horizontal: 300),
+                              vertical: 100, horizontal: 392),
                           height: 100,
                           width: 100,
                           decoration: BoxDecoration(
@@ -854,7 +835,7 @@ class Shoes extends StatelessWidget {
                       builder: (BuildContext context) {
                         return Container(
                           margin: EdgeInsets.symmetric(
-                              vertical: 100, horizontal: 300),
+                              vertical: 100, horizontal: 392),
                           height: 100,
                           width: 100,
                           decoration: BoxDecoration(
@@ -920,7 +901,7 @@ class Shoes extends StatelessWidget {
                                               height: 30,
                                               width: 80,
                                               alignment: Alignment.center,
-                                              child: Text("small",
+                                              child: Text("8",
                                                   style: TextStyle(
                                                       letterSpacing: 2)),
                                             ),
@@ -933,7 +914,7 @@ class Shoes extends StatelessWidget {
                                               width: 80,
                                               alignment: Alignment.center,
                                               child: Text(
-                                                "medium",
+                                                "9",
                                                 style:
                                                     TextStyle(letterSpacing: 2),
                                               ),
@@ -946,7 +927,7 @@ class Shoes extends StatelessWidget {
                                               height: 30,
                                               width: 80,
                                               alignment: Alignment.center,
-                                              child: Text("large",
+                                              child: Text("10",
                                                   style: TextStyle(
                                                       letterSpacing: 2)),
                                             ),
