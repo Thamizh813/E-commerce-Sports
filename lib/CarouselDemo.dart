@@ -3,16 +3,16 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 final List<String> imgList = [
-  'https://images.unsplash.com/photo-1520588831435-1529e6d7cf5e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fd3d7c35892bd8c7c9e757865a764d4c&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1542356805-7ac8780a5349?ixlib=rb-0.3.5&s=b2e0788ba492e32bce9f969eb451b287&dpr=1&auto=format&fit=crop&w=525&q=60',
-  'https://images.unsplash.com/photo-1521020773588-3b28297b1e70?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e0973395dd1655ea3b8fb83fa95c02c2&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1513043069934-38cc6da2ea9f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b1bd8ede4d7c4c79fe67abd96f520814&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1513373319109-eb154073eb0b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c5748b11351ff65472cba9e1c77fb4c&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1520006403909-838d6b92c22e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cd5c81517b22ee13e47484cddb56d16c&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=828346ed697837ce808cae68d3ddc3cf&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d1046925db0fb1f15417d71ad1676880&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1538411393449-2910995cfa42?ixlib=rb-0.3.5&s=97f82ce7461cb69cf2c0308d4e715d66&dpr=1&auto=format&fit=crop&w=525&q=60',
-  'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89e5fd826f8bdc563ab1743608690f39&auto=format&fit=crop&w=500&q=60',
+  'https://th.bing.com/th/id/R.c07e7f6b6ccca5235273be0a1a33ccd8?rik=s6MrnFPm1%2bMqWw&riu=http%3a%2f%2fwww.paisebachaoindia.com%2fwp-content%2fuploads%2f2015%2f07%2fimg7.png&ehk=E%2f6Ec9oHK1AVwtZLe78yS9EwshazDvsPzsJZ5vm%2b0J8%3d&risl=&pid=ImgRaw',
+  'https://cdn.static-zoutons.com/images/originals/blog/baner1_1592314502.png',
+  'https://th.bing.com/th/id/OIP.Y8WOII5tDyDG9jd4PSUz8AHaEh?pid=ImgDet&rs=1',
+  'https://th.bing.com/th/id/OIP.HD8v8QvrWoeUKqSPhvthvgHaEx?pid=ImgDet&rs=1',
+  'https://4.bp.blogspot.com/-E_zx76WBSAs/U7JxubW47QI/AAAAAAAADBI/lqk1-qHVtcs/s1600/offerszone-gold.jpg',
+  'https://th.bing.com/th/id/R.3f22e87896dbab3c62e383d073a3e502?rik=j4Wtba6uRPJEPA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-R4f1_BxR_Xc%2fTm5mJeoOFAI%2fAAAAAAAABaU%2facEau6jzdtA%2fs1600%2fhart1a_nike_running_clothes.jpg&ehk=gTC99F2kIkywXcMrDZJOZYIKjbWELtOI%2f8qtmTs7cQM%3d&risl=&pid=ImgRaw',
+  'https://th.bing.com/th/id/OIP.q0x27MrppwZY0vqxk-8kbQHaHa?pid=ImgDet&rs=1',
+  'https://th.bing.com/th/id/R.3c0a6f63c456b788f8dcdb04fdd644f8?rik=HjbeSFwZ0Djuhw&riu=http%3a%2f%2fwww.brandedgirls.com%2fwp-content%2fuploads%2f2015%2f06%2fWinter-NIke-Sports-dress.png&ehk=KSrZfT84gniyoPczW%2bmGfrpYJTRUblgRQpNm0rEfGl0%3d&risl=&pid=ImgRaw',
+  'https://th.bing.com/th/id/R.fa590494c8f662754c9c63ddd50949ab?rik=US2cUMKY3Sf5VQ&riu=http%3a%2f%2fmedia.kohls.com.edgesuite.net%2fis%2fimage%2fkohls%2fnike-20140725-kids%3fscl%3d1%26qlt%3d40%2c1%26fmt%3dpjpeg&ehk=UXcBDrtVM9ZN3oMDco6ye4t3PwWwzeyuhJKdMxwzj%2fc%3d&risl=&pid=ImgRaw',
+  'https://i2.wp.com/bleumag.com/v2/wp-content/uploads/2018/07/image.png?fit=1200%2C710'
 ];
 
 class CarouselDemo extends StatefulWidget {

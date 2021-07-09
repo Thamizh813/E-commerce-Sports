@@ -56,138 +56,142 @@ class Slider1 extends StatelessWidget {
                                   decoration: (BoxDecoration(
                                       color: Colors.grey.withOpacity(.2),
                                       borderRadius: BorderRadius.circular(15))),
-                                  child: Column(
-                                    children: [
-                                      SizedBox(height: 60),
-                                      Text(
-                                        name[index]['itemname'].toString(),
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 35,
-                                            fontWeight: FontWeight.w200),
-                                      ),
-                                      Text(
-                                        "In-Stock",
-                                        style: TextStyle(
-                                            color: Colors.black54,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w200),
-                                      ),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Card(
-                                            color: Colors.blue[50],
-                                            elevation: 15,
-                                            child: Container(
-                                              height: 30,
-                                              width: 80,
-                                              alignment: Alignment.center,
-                                              child: Text("small",
-                                                  style: TextStyle(
-                                                      letterSpacing: 2)),
-                                            ),
-                                          ),
-                                          Card(
-                                            color: Colors.blue[50],
-                                            elevation: 15,
-                                            child: Container(
-                                              height: 30,
-                                              width: 80,
-                                              alignment: Alignment.center,
-                                              child: Text(
-                                                "medium",
-                                                style:
-                                                    TextStyle(letterSpacing: 2),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 50),
+                                    child: Column(
+                                      children: [
+                                        SizedBox(height: 60),
+                                        Text(
+                                          name[index]['itemname'].toString(),
+                                          textAlign: TextAlign.left,
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 35,
+                                              fontWeight: FontWeight.w200),
+                                        ),
+                                        Text(
+                                          "In-Stock",
+                                          style: TextStyle(
+                                              color: Colors.black54,
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w200),
+                                        ),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Card(
+                                              color: Colors.blue[50],
+                                              elevation: 15,
+                                              child: Container(
+                                                height: 30,
+                                                width: 80,
+                                                alignment: Alignment.center,
+                                                child: Text("small",
+                                                    style: TextStyle(
+                                                        letterSpacing: 2)),
                                               ),
                                             ),
-                                          ),
-                                          Card(
-                                            color: Colors.blue[50],
-                                            elevation: 15,
-                                            child: Container(
-                                              height: 30,
-                                              width: 80,
-                                              alignment: Alignment.center,
-                                              child: Text("large",
+                                            Card(
+                                              color: Colors.blue[50],
+                                              elevation: 15,
+                                              child: Container(
+                                                height: 30,
+                                                width: 80,
+                                                alignment: Alignment.center,
+                                                child: Text(
+                                                  "medium",
                                                   style: TextStyle(
-                                                      letterSpacing: 2)),
+                                                      letterSpacing: 2),
+                                                ),
+                                              ),
                                             ),
+                                            Card(
+                                              color: Colors.blue[50],
+                                              elevation: 15,
+                                              child: Container(
+                                                height: 30,
+                                                width: 80,
+                                                alignment: Alignment.center,
+                                                child: Text("large",
+                                                    style: TextStyle(
+                                                        letterSpacing: 2)),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Text(
+                                          "₹ ${name[index]['itemprice'].toString()}",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              letterSpacing: 2),
+                                        ),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Container(
+                                          height: 40,
+                                          width: 150,
+                                          decoration: BoxDecoration(
+                                              color: Colors.lightBlue[300],
+                                              borderRadius:
+                                                  BorderRadius.circular(15),
+                                              border: Border.all(
+                                                  color: Colors.white),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                    color: Colors.black26,
+                                                    offset: Offset(-1, 2),
+                                                    spreadRadius: 2,
+                                                    blurRadius: 4)
+                                              ]),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Icon(Icons.shopping_cart),
+                                              Text("     Add to Cart")
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Text(
-                                        "₹ ${name[index]['itemprice'].toString()}",
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 20,
-                                            letterSpacing: 2),
-                                      ),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Container(
-                                        height: 40,
-                                        width: 150,
-                                        decoration: BoxDecoration(
-                                            color: Colors.lightBlue[300],
-                                            borderRadius:
-                                                BorderRadius.circular(15),
-                                            border:
-                                                Border.all(color: Colors.white),
-                                            boxShadow: [
-                                              BoxShadow(
-                                                  color: Colors.black26,
-                                                  offset: Offset(-1, 2),
-                                                  spreadRadius: 2,
-                                                  blurRadius: 4)
-                                            ]),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Icon(Icons.shopping_cart),
-                                            Text("     Add to Cart")
-                                          ],
                                         ),
-                                      ),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Container(
-                                        height: 40,
-                                        width: 150,
-                                        decoration: BoxDecoration(
-                                            color: Colors.lightGreen[300],
-                                            borderRadius:
-                                                BorderRadius.circular(15),
-                                            border:
-                                                Border.all(color: Colors.white),
-                                            boxShadow: [
-                                              BoxShadow(
-                                                  color: Colors.black26,
-                                                  offset: Offset(-1, 2),
-                                                  spreadRadius: 2,
-                                                  blurRadius: 4)
-                                            ]),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Icon(Icons.shopping_cart),
-                                            Text("     Shop Now")
-                                          ],
+                                        SizedBox(
+                                          height: 20,
                                         ),
-                                      )
-                                    ],
+                                        Container(
+                                          height: 40,
+                                          width: 150,
+                                          decoration: BoxDecoration(
+                                              color: Colors.lightGreen[300],
+                                              borderRadius:
+                                                  BorderRadius.circular(15),
+                                              border: Border.all(
+                                                  color: Colors.white),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                    color: Colors.black26,
+                                                    offset: Offset(-1, 2),
+                                                    spreadRadius: 2,
+                                                    blurRadius: 4)
+                                              ]),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Icon(Icons.shopping_cart),
+                                              Text("     Shop Now")
+                                            ],
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                               )
@@ -238,25 +242,31 @@ class Slider1 extends StatelessWidget {
       ),
       Padding(
           padding: new EdgeInsets.only(
-              bottom: 8.0, top: 15, left: 1200, right: 10.0),
-          child: new RaisedButton(
-              color: Colors.white,
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ClothingPage()));
-              },
-              shape: new RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(6.0)),
-              textColor: Colors.black,
-              child: new Text(
-                "View All",
-                style: TextStyle(
-                  fontFamily: 'raleway',
-                  fontSize: 25,
-                  fontWeight: FontWeight.w200,
-                  color: Colors.grey,
-                ),
-              )))
+              bottom: 8.0, top: 15, left: 1400, right: 10.0),
+          // child: new RaisedButton(
+          //     color: Colors.white,
+          //     onPressed: () {
+          //       Navigator.push(context,
+          //           MaterialPageRoute(builder: (context) => ClothingPage()));
+          //     },
+          //     shape: new RoundedRectangleBorder(
+          //         borderRadius: new BorderRadius.circular(6.0)),
+          //     textColor: Colors.black,
+          child: TextButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ClothingPage()));
+            },
+            child: new Text(
+              "View All",
+              style: TextStyle(
+                fontFamily: 'raleway',
+                fontSize: 25,
+                fontWeight: FontWeight.w200,
+                color: Colors.grey,
+              ),
+            ),
+          )),
     ]);
   }
 }
