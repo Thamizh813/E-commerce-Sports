@@ -1,9 +1,6 @@
-import 'dart:html';
-
 import 'package:bat/CarouselDemo.dart';
-import 'package:bat/CategoriesCollection.dart';
-import 'package:bat/Dealsoftheday.dart';
-import 'package:bat/Single_brand_promotion.dart';
+import 'package:bat/home/clothing.dart';
+
 import 'package:flutter/material.dart';
 
 //Feed page with a collection of multiple Widgets
@@ -41,34 +38,7 @@ class FeedWidgetList extends StatelessWidget {
                   SizedBox(
                     height: 50,
                   ),
-                  Container(
-                    height: 300,
-                    color: Colors.white,
-                    child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 10,
-                        itemBuilder: (BuildContext contex, index) {
-                          return Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 20, horizontal: 15),
-                            child: Container(
-                              height: 250,
-                              width: 250,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color: Colors.black45,
-                                        offset: Offset(1, 2),
-                                        spreadRadius: 2,
-                                        blurRadius: 10)
-                                  ]),
-                              child: Text("2237dsh fkhdksha"),
-                            ),
-                          );
-                        }),
-                  ),
+                  Clothing(),
                   SizedBox(
                     height: 50,
                   ),
@@ -83,34 +53,7 @@ class FeedWidgetList extends StatelessWidget {
                   SizedBox(
                     height: 50,
                   ),
-                  Container(
-                    height: 300,
-                    color: Colors.white,
-                    child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 10,
-                        itemBuilder: (BuildContext contex, index) {
-                          return Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 20, horizontal: 15),
-                            child: Container(
-                              height: 250,
-                              width: 250,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color: Colors.black45,
-                                        offset: Offset(1, 2),
-                                        spreadRadius: 2,
-                                        blurRadius: 10)
-                                  ]),
-                              child: Text("2237dsh fkhdksha"),
-                            ),
-                          );
-                        }),
-                  ),
+                  Clothing(),
                   SizedBox(
                     height: 50,
                   ),
@@ -125,34 +68,7 @@ class FeedWidgetList extends StatelessWidget {
                   SizedBox(
                     height: 50,
                   ),
-                  Container(
-                    height: 300,
-                    color: Colors.white,
-                    child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 10,
-                        itemBuilder: (BuildContext contex, index) {
-                          return Padding(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 20, horizontal: 15),
-                            child: Container(
-                              height: 250,
-                              width: 250,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: [
-                                    BoxShadow(
-                                        color: Colors.black45,
-                                        offset: Offset(1, 2),
-                                        spreadRadius: 2,
-                                        blurRadius: 10)
-                                  ]),
-                              child: Text("2237dsh fkhdksha"),
-                            ),
-                          );
-                        }),
-                  ),
+                  Clothing(),
                   SizedBox(
                     height: 150,
                   ),
