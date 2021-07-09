@@ -1,3 +1,5 @@
+import 'package:bat/clothes.dart';
+import 'package:bat/main.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesCollection extends StatelessWidget {
@@ -19,7 +21,8 @@ class CategoriesCollection extends StatelessWidget {
             color: Colors.black,
             child: new FlatButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed("/notifications");
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
                 },
                 child: new Padding(
                   padding: const EdgeInsets.only(
@@ -42,7 +45,8 @@ class CategoriesCollection extends StatelessWidget {
             color: Colors.black,
             child: new FlatButton(
               onPressed: () {
-                Navigator.of(context).pushNamed("/notifications");
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ClothingPage()));
               },
               child: new Padding(
                 padding:

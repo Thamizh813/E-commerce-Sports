@@ -1,4 +1,7 @@
+import 'package:bat/CategoriesCollection.dart';
+import 'package:bat/FeedWidgetList.dart';
 import 'package:bat/home/Men.dart';
+import 'package:bat/home/footer.dart';
 import 'package:bat/home/kids.dart';
 import 'package:bat/home/shoes.dart';
 import 'package:bat/home/women.dart';
@@ -23,73 +26,114 @@ class ClothingPage extends StatelessWidget {
           ),
         ),
         drawer: Draw(),
-        body: SingleChildScrollView(
-          child: Column(children: [
-            SizedBox(
-              height: 30,
+        body: Column(children: [
+          Container(
+            color: Colors.black,
+            child: Row(
+              children: [
+                Container(
+                  color: Colors.black,
+                  child: CategoriesCollection(),
+                ),
+                Container(
+                    color: Colors.black,
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed("/notifications");
+                      },
+                      color: Colors.black,
+                      child: new Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          new Icon(
+                            Icons.search,
+                            color: Colors.grey,
+                          ),
+                          new Padding(
+                            padding: const EdgeInsets.all(0.0),
+                          ),
+                          new Text('Search for Products, Brands and More',
+                              textAlign: TextAlign.center,
+                              style: new TextStyle(color: Colors.grey))
+                        ],
+                      ),
+                    )),
+              ],
             ),
-            Text(
-              "Kids Clothing",
-              style: TextStyle(
-                  color: Colors.grey,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 35,
-                  fontFamily: 'raleway'),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Clothmain(),
-            SizedBox(
-              height: 30,
-            ),
-            Text(
-              "Men Clothing",
-              style: TextStyle(
-                  color: Colors.grey,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 35,
-                  fontFamily: 'raleway'),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            MenMain(),
-            SizedBox(
-              height: 30,
-            ),
-            Text(
-              "Women Clothing",
-              style: TextStyle(
-                  color: Colors.grey,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 35,
-                  fontFamily: 'raleway'),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            WomenMain(),
-            SizedBox(
-              height: 30,
-            ),
-            Text(
-              "Shoes",
-              style: TextStyle(
-                  color: Colors.grey,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 35,
-                  fontFamily: 'raleway'),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Shoemain(),
-            SizedBox(
-              height: 150,
-            ),
-          ]),
-        ));
+          ),
+          Flexible(
+            child: ListView(children: [
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                "Kids Clothing",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 35,
+                    fontFamily: 'raleway'),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Clothmain(),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                "Men Clothing",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 35,
+                    fontFamily: 'raleway'),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              MenMain(),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                "Women Clothing",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 35,
+                    fontFamily: 'raleway'),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              WomenMain(),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                "Shoes",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 35,
+                    fontFamily: 'raleway'),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Shoemain(),
+              SizedBox(
+                height: 50,
+              ),
+              Footer(),
+            ]),
+          ),
+        ]));
   }
 }
 
