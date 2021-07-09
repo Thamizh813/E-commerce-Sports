@@ -1,6 +1,6 @@
 import 'package:bat/home/Men.dart';
-import 'package:bat/home/allclothmain.dart';
-import 'package:bat/home/shoemain.dart';
+import 'package:bat/home/kids.dart';
+import 'package:bat/home/shoes.dart';
 import 'package:bat/home/women.dart';
 import 'package:bat/main.dart';
 import 'package:flutter/material.dart';
