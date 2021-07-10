@@ -1,4 +1,3 @@
-import 'package:bat/clothes.dart';
 import 'package:bat/yadava.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +42,7 @@ class _CricketmainState extends State<Cricketmain> {
     },
     {
       'image':
-      'https://images-na.ssl-images-amazon.com/images/I/4125d5RJ%2BzL.jpg',
+          'https://images-na.ssl-images-amazon.com/images/I/4125d5RJ%2BzL.jpg',
       'itemname': 'Count White ball',
       'itemprice': '2,399.00'
     },
@@ -59,7 +58,6 @@ class _CricketmainState extends State<Cricketmain> {
       'itemname': 'guard SG ',
       'itemprice': '499.00'
     },
-   
     {
       'image':
           'https://images-na.ssl-images-amazon.com/images/I/91EJ25lYE9L._SL1500_.jpg',

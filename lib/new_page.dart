@@ -10,15 +10,14 @@ class NewPage extends StatelessWidget {
     return new Scaffold(
         resizeToAvoidBottomInset: true,
         appBar: new AppBar(
+          backgroundColor: Colors.black,
           title: new Text(title),
           elevation: 0.0,
         ), // Appbar
-        body: new SafeArea(child: new GridView(
+        body: new SafeArea(
+            child: new GridView(
           gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 5,
-              crossAxisSpacing: 5.0,
-              childAspectRatio: 1.0
-          ),
+              crossAxisCount: 5, crossAxisSpacing: 5.0, childAspectRatio: 1.0),
           children: <Widget>[
             new Container(
                 color: Colors.lightBlue, child: new InkResponse(onTap: null)),
@@ -27,7 +26,6 @@ class NewPage extends StatelessWidget {
             new Container(color: Colors.amber),
             new Container(color: Colors.pink),
           ],
-        ))
-    );
+        )));
   }
 }

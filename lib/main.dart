@@ -1,4 +1,6 @@
+import 'package:bat/clothes.dart';
 import 'package:bat/feed_body.dart';
+import 'package:bat/yadava.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -62,7 +64,7 @@ class HomePage extends StatelessWidget {
         titleSpacing: -2.0,
         backgroundColor: Colors.black,
         elevation: 0.0,
-        title: new Text('Shoppy',
+        title: new Text('Nike Shoppy',
             style: new TextStyle(
                 color: Colors.white,
                 fontStyle: FontStyle.normal,
@@ -75,7 +77,14 @@ class HomePage extends StatelessWidget {
         iconTheme: new IconThemeData(color: Colors.white),
         actions: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(top: 15, bottom: 15),
+              padding: EdgeInsets.only(right: 1050),
+              child: Image.asset(
+                'lib/assets/Nikes.jpg',
+                height: 40,
+                width: 60,
+              )),
+          Padding(
+            padding: const EdgeInsets.only(top: 15, bottom: 15, right: 10),
             child: TextButton(
               onPressed: () {},
               child: Text(
@@ -148,32 +157,23 @@ class Draw extends StatelessWidget {
               height: defaultTargetPlatform == TargetPlatform.iOS ? 5.0 : 0.0,
               color: defaultTargetPlatform == TargetPlatform.iOS
                   ? Colors.grey
-                  : Colors.white), //
-          // new ListTile(
-          //   title: new Text('Electronics'),
-          //   leading: new Icon(Icons.phone_iphone),
-          //   onTap: () {
-          //     // Navigator.of(context).pop();
-          //     Navigator.of(context).pushNamed("/notifications");
-          //   },
-          // ), //List Tile 1
-          // new ListTile(
-          //   title: new Text('Lifestyle'),
-          //   leading: new Icon(Icons.face),
-          //   onTap: () {
-          //     Navigator.of(context).pop();
-          //     Navigator.of(context).pushNamed("/notifications");
-          //   },
-          // ), //List Tile 2
+                  : Colors.white),
+
           new ListTile(
             title: new Text('Clothings'),
-            leading: new Icon(Icons.shopping_cart_outlined),
-            onTap: () {},
+            leading: new Icon(Icons.shopping_bag_rounded),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ClothingPage()));
+            },
           ), //List Tile 3
           new ListTile(
             title: new Text('Sports'),
-            leading: new Icon(Icons.store),
-            onTap: () {},
+            leading: new Icon(Icons.sports_football),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SportsPage()));
+            },
           ), //List 4
           new ListTile(
             title: new Text('Offer Zone'),

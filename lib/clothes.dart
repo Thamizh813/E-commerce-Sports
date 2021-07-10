@@ -1,5 +1,5 @@
 import 'package:bat/CategoriesCollection.dart';
-import 'package:bat/FeedWidgetList.dart';
+
 import 'package:bat/home/Men.dart';
 import 'package:bat/home/footer.dart';
 import 'package:bat/home/kids.dart';

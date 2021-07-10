@@ -240,33 +240,6 @@ class Slider1 extends StatelessWidget {
               );
             }),
       ),
-      Padding(
-          padding: new EdgeInsets.only(
-              bottom: 8.0, top: 15, left: 1400, right: 10.0),
-          // child: new RaisedButton(
-          //     color: Colors.white,
-          //     onPressed: () {
-          //       Navigator.push(context,
-          //           MaterialPageRoute(builder: (context) => ClothingPage()));
-          //     },
-          //     shape: new RoundedRectangleBorder(
-          //         borderRadius: new BorderRadius.circular(6.0)),
-          //     textColor: Colors.black,
-          child: TextButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ClothingPage()));
-            },
-            child: new Text(
-              "View All",
-              style: TextStyle(
-                fontFamily: 'raleway',
-                fontSize: 25,
-                fontWeight: FontWeight.w200,
-                color: Colors.grey,
-              ),
-            ),
-          )),
     ]);
   }
 }
