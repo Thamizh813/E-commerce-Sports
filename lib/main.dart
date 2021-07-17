@@ -1,5 +1,6 @@
 import 'package:bat/clothes.dart';
 import 'package:bat/feed_body.dart';
+import 'package:bat/home/signin.dart';
 import 'package:bat/yadava.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -86,7 +87,10 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 15, bottom: 15, right: 10),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LoginPage()));
+              },
               child: Text(
                 "Sign In",
                 textAlign: TextAlign.center,
