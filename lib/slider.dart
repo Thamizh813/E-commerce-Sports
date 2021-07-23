@@ -1,4 +1,3 @@
-import 'package:bat/clothes.dart';
 import 'package:flutter/material.dart';
 
 class Slider1 extends StatelessWidget {

@@ -1,4 +1,5 @@
 import 'package:bat/clothes.dart';
+import 'package:bat/slider.dart';
 import 'package:flutter/material.dart';
 
 class Clothmain extends StatefulWidget {
@@ -91,6 +92,6 @@ class _ClothmainState extends State<Clothmain> {
   ];
   @override
   Widget build(BuildContext context) {
-    return AllCloth(list);
+    return Slider1(list);
   }
 }

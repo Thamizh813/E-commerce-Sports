@@ -1,3 +1,4 @@
+import 'package:bat/clothes.dart';
 import 'package:bat/yadava.dart';
 import 'package:flutter/material.dart';
 
@@ -73,6 +74,6 @@ class _CricketmainshoeState extends State<Cricketmainshoe> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Cricketshoes(list);
+    return Shoes(list);
   }
 }
