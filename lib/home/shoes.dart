@@ -1,4 +1,4 @@
-import 'package:bat/clothes.dart';
+import 'package:bat/components/sliderforshoes.dart';
 import 'package:flutter/material.dart';
 
 class Shoemain extends StatefulWidget {

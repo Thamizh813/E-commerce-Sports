@@ -1,5 +1,4 @@
-import 'package:bat/clothes.dart';
-import 'package:bat/yadava.dart';
+import 'package:bat/components/sliderforshoes.dart';
 import 'package:flutter/material.dart';
 
 class Cricketmainshoe extends StatefulWidget {

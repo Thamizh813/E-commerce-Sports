@@ -1,4 +1,4 @@
-import 'package:bat/yadava.dart';
+import 'package:bat/components/sliderforsports.dart';
 import 'package:flutter/material.dart';
 
 class Cricketmain extends StatefulWidget {

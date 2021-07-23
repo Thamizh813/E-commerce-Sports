@@ -1,5 +1,6 @@
 import 'package:bat/clothes.dart';
-import 'package:bat/slider.dart';
+import 'package:bat/components/sliderforclothes.dart';
+
 import 'package:flutter/material.dart';
 
 class WomenMain extends StatefulWidget {
