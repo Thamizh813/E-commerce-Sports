@@ -1,3 +1,4 @@
+import 'package:bat/addtocart.dart';
 import 'package:flutter/material.dart';
 
 class Cricketmaterial extends StatelessWidget {
@@ -138,29 +139,50 @@ class Cricketmaterial extends StatelessWidget {
                                         SizedBox(
                                           height: 20,
                                         ),
-                                        Container(
-                                          height: 40,
-                                          width: 150,
-                                          decoration: BoxDecoration(
-                                              color: Colors.lightBlue[300],
-                                              borderRadius:
-                                                  BorderRadius.circular(15),
-                                              border: Border.all(
-                                                  color: Colors.white),
-                                              boxShadow: [
-                                                BoxShadow(
-                                                    color: Colors.black26,
-                                                    offset: Offset(-1, 2),
-                                                    spreadRadius: 2,
-                                                    blurRadius: 4)
-                                              ]),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Icon(Icons.shopping_cart),
-                                              Text("     Add to Cart")
-                                            ],
+                                        GestureDetector(
+                                          excludeFromSemantics: true,
+                                          onTap: () {
+                                            print(cricketmaterial[index]
+                                                    ['itemname']
+                                                .toString());
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        Addtocart(
+                                                            cricketmaterial[
+                                                                        index]
+                                                                    ['itemname']
+                                                                .toString(),
+                                                            cricketmaterial[
+                                                                        index][
+                                                                    'itemprice']
+                                                                .toString())));
+                                          },
+                                          child: Container(
+                                            height: 40,
+                                            width: 150,
+                                            decoration: BoxDecoration(
+                                                color: Colors.lightBlue[300],
+                                                borderRadius:
+                                                    BorderRadius.circular(15),
+                                                border: Border.all(
+                                                    color: Colors.white),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                      color: Colors.black26,
+                                                      offset: Offset(-1, 2),
+                                                      spreadRadius: 2,
+                                                      blurRadius: 4)
+                                                ]),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Icon(Icons.shopping_cart),
+                                                Text("     Add to Cart")
+                                              ],
+                                            ),
                                           ),
                                         ),
                                         SizedBox(

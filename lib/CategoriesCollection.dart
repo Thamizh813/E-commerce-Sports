@@ -71,7 +71,7 @@ class CategoriesCollection extends StatelessWidget {
             color: Colors.black,
             child: new FlatButton(
               onPressed: () {
-              Navigator.push(context,
+                Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SportsPage()));
               },
               child: new Padding(
@@ -96,7 +96,8 @@ class CategoriesCollection extends StatelessWidget {
             color: Colors.black,
             child: new FlatButton(
               onPressed: () {
-                Navigator.of(context).pushNamed("/cart");
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
               },
               child: new Padding(
                 padding:

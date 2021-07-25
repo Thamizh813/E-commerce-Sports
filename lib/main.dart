@@ -1,3 +1,4 @@
+import 'package:bat/addtocart.dart';
 import 'package:bat/clothes.dart';
 import 'package:bat/feed_body.dart';
 import 'package:bat/home/signin.dart';
@@ -65,7 +66,7 @@ class HomePage extends StatelessWidget {
         titleSpacing: -2.0,
         backgroundColor: Colors.black,
         elevation: 0.0,
-        title: new Text('Nike Shoppy',
+        title: new Text('Nike',
             style: new TextStyle(
                 color: Colors.white,
                 fontStyle: FontStyle.normal,
@@ -110,7 +111,8 @@ class HomePage extends StatelessWidget {
           new IconButton(
               icon: new Icon(choices[1].icon),
               onPressed: () {
-                Navigator.of(context).pushNamed("/cart");
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Addtocart('', '')));
               }),
           new IconButton(
               icon: new Icon(choices[2].icon),
