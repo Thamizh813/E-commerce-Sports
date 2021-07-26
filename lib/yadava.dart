@@ -70,7 +70,7 @@ class SportsPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Addtocart('', '')));
+                          builder: (context) => Addtocart('', '', '')));
                 }),
             new IconButton(
                 icon: new Icon(choices[2].icon),

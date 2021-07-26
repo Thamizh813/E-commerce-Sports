@@ -13,43 +13,43 @@ class _ClothingState extends State<Clothing> {
     {
       'image':
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBVrEWnhsaOWgOXD8gHulwMpWGATdW-pFvAA&usqp=CAU',
-      'itemname': 'namehere',
+      'itemname': 'Classy shirt',
       'itemprice': '1,299.00'
     },
     {
       'image':
           'https://th.bing.com/th/id/OIP.e4yWGWIbK8__idL4RAy81gHaHa?pid=ImgDet&rs=1',
-      'itemname': 'namehere',
+      'itemname': 'Child fashion',
       'itemprice': '1,299.00'
     },
     {
       'image':
           'https://th.bing.com/th/id/OIP.qIc-wd0KfiFjHgmTMJWD1AHaHa?pid=ImgDet&rs=1',
-      'itemname': 'namehere',
+      'itemname': 'Sports suit',
       'itemprice': '1,299.00'
     },
     {
       'image':
           'https://5.imimg.com/data5/YS/XX/MY-8683446/men-sports-dress-500x500.jpg',
-      'itemname': 'namehere',
+      'itemname': 'Red dress',
       'itemprice': '1,299.00'
     },
     {
       'image':
           'https://th.bing.com/th/id/OIP.AH2lQJ_kVHD01IQnzpG1dAHaHa?pid=ImgDet&rs=1',
-      'itemname': 'namehere',
+      'itemname': 'Nike black T-shirt',
       'itemprice': '1,299.00'
     },
     {
       'image':
           'https://th.bing.com/th/id/OIP.ajKKKYhYv3VjCxujn7iCigHaHa?pid=ImgDet&rs=1',
-      'itemname': 'namehere',
+      'itemname': 'Black jacket',
       'itemprice': '1,299.00'
     },
     {
       'image':
           'https://th.bing.com/th/id/OIP.omtK7Z-693ED73hBb2gBwgHaHa?pid=ImgDet&rs=1',
-      'itemname': 'namehere',
+      'itemname': 'Blacky shoes',
       'itemprice': '1,299.00'
     }
   ];

@@ -150,14 +150,16 @@ class Cricketmaterial extends StatelessWidget {
                                                 MaterialPageRoute(
                                                     builder: (context) =>
                                                         Addtocart(
-                                                            cricketmaterial[
-                                                                        index]
-                                                                    ['itemname']
-                                                                .toString(),
-                                                            cricketmaterial[
-                                                                        index][
-                                                                    'itemprice']
-                                                                .toString())));
+                                                          cricketmaterial[index]
+                                                                  ['itemname']
+                                                              .toString(),
+                                                          cricketmaterial[index]
+                                                                  ['itemprice']
+                                                              .toString(),
+                                                          cricketmaterial[index]
+                                                                  ['image']
+                                                              .toString(),
+                                                        )));
                                           },
                                           child: Container(
                                             height: 40,

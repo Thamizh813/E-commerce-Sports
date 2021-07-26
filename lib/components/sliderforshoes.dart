@@ -149,12 +149,15 @@ class Shoes extends StatelessWidget {
                                                 MaterialPageRoute(
                                                     builder: (context) =>
                                                         Addtocart(
-                                                            name[index]
-                                                                    ['itemname']
-                                                                .toString(),
-                                                            name[index][
-                                                                    'itemprice']
-                                                                .toString())));
+                                                          name[index]
+                                                                  ['itemname']
+                                                              .toString(),
+                                                          name[index]
+                                                                  ['itemprice']
+                                                              .toString(),
+                                                          name[index]['image']
+                                                              .toString(),
+                                                        )));
                                           },
                                           child: Container(
                                             height: 40,

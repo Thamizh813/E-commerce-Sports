@@ -111,8 +111,10 @@ class HomePage extends StatelessWidget {
           new IconButton(
               icon: new Icon(choices[1].icon),
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Addtocart('', '')));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Addtocart('', '', '')));
               }),
           new IconButton(
               icon: new Icon(choices[2].icon),
