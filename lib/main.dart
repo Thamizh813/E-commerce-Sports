@@ -101,12 +101,12 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(
                         builder: (context) => Addtocart('', '', '')));
               }),
-          new IconButton(
-              icon: new Icon(Icons.account_circle_outlined),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => notifytext()));
-              }),
+          // new IconButton(
+          //     icon: new Icon(Icons.account_circle_outlined),
+          //     onPressed: () {
+          //       Navigator.push(context,
+          //           MaterialPageRoute(builder: (context) => notifytext()));
+          //     }),
         ],
       ), //AppBar
       drawer: Draw(),
@@ -177,7 +177,12 @@ class Draw extends StatelessWidget {
           new ListTile(
             title: new Text('My Cart'),
             leading: new Icon(Icons.shopping_cart),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => Addtocart('', '', '')));
+            },
           ), //List Tile 6
           // new ListTile(
           //   title: new Text('My Wishlist'),
