@@ -1,12 +1,12 @@
 import 'package:bat/addtocart.dart';
 import 'package:bat/clothes.dart';
 import 'package:bat/feed_body.dart';
+
+import 'package:bat/home/notificationtest.dart';
 import 'package:bat/home/signin.dart';
 import 'package:bat/yadava.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
-import 'new_page.dart';
 
 void main() => runApp(new MyApp());
 
@@ -29,33 +29,16 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: new ThemeData(
-            primarySwatch: Colors.blue,
-            primaryColor: defaultTargetPlatform == TargetPlatform.iOS
-                ? Colors.grey[50]
-                : Colors.blue), //Theme Data
-        home: new HomePage(),
-        routes: <String, WidgetBuilder>{
-          "/notifications": (BuildContext context) => NewPage('Notifications'),
-          "/cart": (BuildContext context) => NewPage('Cart'),
-          "/account": (BuildContext context) => NewPage('Account'),
-        }); //Material App
+      debugShowCheckedModeBanner: false,
+      theme: new ThemeData(
+          primarySwatch: Colors.blue,
+          primaryColor: defaultTargetPlatform == TargetPlatform.iOS
+              ? Colors.grey[50]
+              : Colors.blue), //Theme Data
+      home: new HomePage(),
+    );
   }
 }
-
-class Choice {
-  const Choice({required this.title, required this.icon});
-
-  final String title;
-  final IconData icon;
-}
-
-const List<Choice> choices = const <Choice>[
-  const Choice(title: 'Notifications', icon: Icons.notifications),
-  const Choice(title: 'Cart', icon: Icons.shopping_cart),
-  const Choice(title: 'Account', icon: Icons.account_circle),
-];
 
 class HomePage extends StatelessWidget {
   @override
@@ -104,12 +87,14 @@ class HomePage extends StatelessWidget {
             ),
           ),
           new IconButton(
-              icon: new Icon(choices[0].icon),
-              onPressed: () {
-                Navigator.of(context).pushNamed("/notifications");
-              }),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => notifytext()));
+            },
+            icon: Icon(Icons.notifications),
+          ),
           new IconButton(
-              icon: new Icon(choices[1].icon),
+              icon: new Icon(Icons.shopping_cart),
               onPressed: () {
                 Navigator.push(
                     context,
@@ -117,9 +102,10 @@ class HomePage extends StatelessWidget {
                         builder: (context) => Addtocart('', '', '')));
               }),
           new IconButton(
-              icon: new Icon(choices[2].icon),
+              icon: new Icon(Icons.account_circle_outlined),
               onPressed: () {
-                Navigator.of(context).pushNamed("/account");
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => notifytext()));
               }),
         ],
       ), //AppBar

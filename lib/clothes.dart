@@ -3,6 +3,7 @@ import 'package:bat/CategoriesCollection.dart';
 import 'package:bat/home/Men.dart';
 import 'package:bat/home/footer.dart';
 import 'package:bat/home/kids.dart';
+import 'package:bat/home/notification.dart';
 import 'package:bat/home/shoes.dart';
 import 'package:bat/home/women.dart';
 import 'package:bat/main.dart';
@@ -59,12 +60,13 @@ class ClothingPage extends StatelessWidget {
               ),
             ),
             new IconButton(
-                icon: new Icon(choices[0].icon),
+                icon: new Icon(Icons.notifications),
                 onPressed: () {
-                  Navigator.of(context).pushNamed("/notifications");
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (context) => Notify()));
                 }),
             new IconButton(
-                icon: new Icon(choices[1].icon),
+                icon: new Icon(Icons.shopping_cart),
                 onPressed: () {
                   Navigator.push(
                       context,
@@ -72,9 +74,10 @@ class ClothingPage extends StatelessWidget {
                           builder: (context) => Addtocart('', '', '')));
                 }),
             new IconButton(
-                icon: new Icon(choices[2].icon),
+                icon: new Icon(Icons.account_circle_outlined),
                 onPressed: () {
-                  Navigator.of(context).pushNamed("/account");
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (context) => Notify()));
                 }),
           ],
         ),
