@@ -211,19 +211,13 @@ class _DrawState extends State<Draw> {
             leading: new Icon(Icons.account_box),
             onTap: () {},
           ), //List Tile 9
-          new ListTile(
-            title: new Text('Logout'),
-            leading: new Icon(Icons.remove_circle_outline),
-            onTap: () async {
-              await _signOut();
-              if (_firebaseAuth.currentUser == null) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginPage()),
-                );
-              }
-            },
-          ),
+          // new ListTile(
+          //   title: new Text('Logout'),
+          //   leading: new Icon(Icons.remove_circle_outline),
+          //   onTap: () async {
+
+          //   },
+          // ),
           new ListTile(
             title: new Text('About us'),
             leading: new Icon(Icons.info),
