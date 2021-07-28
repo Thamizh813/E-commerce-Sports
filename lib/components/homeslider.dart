@@ -1,16 +1,18 @@
+import 'package:bat/home/payment.dart';
+import 'package:bat/home/signin.dart';
 import 'package:flutter/material.dart';
 
 import '../addtocart.dart';
 
-class Slider1 extends StatelessWidget {
-  Slider1(this.name) : super();
+class Homeslider extends StatelessWidget {
+  Homeslider(this.name) : super();
   final List<Map<String, Object>> name;
 
   @override
   Widget build(BuildContext context) {
     return Column(children: [
       Container(
-        height: 300,
+        height: 700,
         color: Colors.white,
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -187,29 +189,39 @@ class Slider1 extends StatelessWidget {
                                         SizedBox(
                                           height: 20,
                                         ),
-                                        Container(
-                                          height: 40,
-                                          width: 150,
-                                          decoration: BoxDecoration(
-                                              color: Colors.lightGreen[300],
-                                              borderRadius:
-                                                  BorderRadius.circular(15),
-                                              border: Border.all(
-                                                  color: Colors.white),
-                                              boxShadow: [
-                                                BoxShadow(
-                                                    color: Colors.black26,
-                                                    offset: Offset(-1, 2),
-                                                    spreadRadius: 2,
-                                                    blurRadius: 4)
-                                              ]),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Icon(Icons.shopping_cart),
-                                              Text("     Shop Now")
-                                            ],
+                                        GestureDetector(
+                                          excludeFromSemantics: true,
+                                          onTap: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        MySample()));
+                                          },
+                                          child: Container(
+                                            height: 40,
+                                            width: 150,
+                                            decoration: BoxDecoration(
+                                                color: Colors.lightGreen[300],
+                                                borderRadius:
+                                                    BorderRadius.circular(15),
+                                                border: Border.all(
+                                                    color: Colors.white),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                      color: Colors.black26,
+                                                      offset: Offset(-1, 2),
+                                                      spreadRadius: 2,
+                                                      blurRadius: 4)
+                                                ]),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Icon(Icons.shopping_cart),
+                                                Text("     Shop Now")
+                                              ],
+                                            ),
                                           ),
                                         )
                                       ],
@@ -225,8 +237,8 @@ class Slider1 extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
                   child: Container(
-                      height: 350,
-                      width: 250,
+                      height: 500,
+                      width: 500,
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
@@ -244,16 +256,18 @@ class Slider1 extends StatelessWidget {
                             child: Container(
                               child: Image.network(
                                 name[index]['image'].toString(),
-                                height: 200,
+                                height: 600,
                               ),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.symmetric(vertical: 8),
+                            padding: EdgeInsets.symmetric(vertical: 5),
                             child: Text(
                               "₹ ${name[index]['itemprice'].toString()}",
                               style: TextStyle(
-                                  color: Colors.deepOrange, fontSize: 15),
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600),
                             ),
                           )
                         ],

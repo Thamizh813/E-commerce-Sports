@@ -46,7 +46,7 @@ class ClothingPage extends StatelessWidget {
               child: TextButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginPage()));
+                      MaterialPageRoute(builder: (context) => MyApps()));
                 },
                 child: Text(
                   "Sign In",

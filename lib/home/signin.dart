@@ -2,7 +2,7 @@ import 'package:bat/home/authentication.dart/fire_auth.dart';
 import 'package:bat/home/authentication.dart/validator.dart';
 import 'package:bat/main.dart';
 import 'package:bat/signup.dart';
-import 'package:bat/withoutssignin/home.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
     if (user != null) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => HomePage1(),
+          builder: (context) => HomePage(),
         ),
       );
     }
@@ -66,6 +66,9 @@ class _LoginPageState extends State<LoginPage> {
         body: FutureBuilder(
             future: _initializeFirebase(),
             builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return CircularProgressIndicator();
+              }
               if (snapshot.connectionState == ConnectionState.done) {
                 return SingleChildScrollView(
                   child: Column(
@@ -197,67 +200,67 @@ class _LoginPageState extends State<LoginPage> {
                                       SizedBox(
                                         height: 30,
                                       ),
-                                      _isProcessing
-                                          ? CircularProgressIndicator()
-                                          : Padding(
-                                              padding: const EdgeInsets.only(
-                                                  top: 18, left: 100),
-                                              child: Material(
-                                                elevation: 5,
-                                                color: Colors.black,
-                                                borderRadius:
-                                                    BorderRadius.circular(32.0),
-                                                child: MaterialButton(
-                                                  onPressed: () async {
-                                                    _focusEmail.unfocus();
-                                                    _focusPassword.unfocus();
+                                      if (_isProcessing)
+                                        CircularProgressIndicator()
+                                      else
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 18, left: 100),
+                                          child: Material(
+                                            elevation: 5,
+                                            color: Colors.black,
+                                            borderRadius:
+                                                BorderRadius.circular(32.0),
+                                            child: MaterialButton(
+                                              onPressed: () async {
+                                                if (_formKey.currentState!
+                                                    .validate()) {
+                                                  setState(() {
+                                                    _isProcessing = true;
+                                                  });
 
-                                                    if (_formKey.currentState!
-                                                        .validate()) {
-                                                      setState(() {
-                                                        _isProcessing = true;
-                                                      });
+                                                  // User? user = await FireAuth
+                                                  //     .signInUsingEmailPassword(
+                                                  //   email: _emailTextController
+                                                  //       .text,
+                                                  //   password:
+                                                  //       _passwordTextController
+                                                  //           .text,
+                                                  // );
 
-                                                      User? user = await FireAuth
-                                                          .signInUsingEmailPassword(
-                                                        email:
-                                                            _emailTextController
-                                                                .text,
-                                                        password:
-                                                            _passwordTextController
-                                                                .text,
-                                                      );
+                                                  setState(() {
+                                                    _isProcessing = false;
+                                                  });
 
-                                                      setState(() {
-                                                        _isProcessing = false;
-                                                      });
-
-                                                      if (user != null) {
-                                                        Navigator.of(context)
-                                                            .pushReplacement(
+                                                  // if (user != null) {
+                                                  //   Navigator.of(context)
+                                                  //       .pushReplacement(
+                                                  //     MaterialPageRoute(
+                                                  //       builder: (context) =>
+                                                  //           HomePage(),
+                                                  //     ),
+                                                  //   );
+                                                  // }
+                                                  Navigator.of(context)
+                                                      .pushReplacement(
                                                           MaterialPageRoute(
-                                                            builder:
-                                                                (context) =>
-                                                                    HomePage1(),
-                                                          ),
-                                                        );
-                                                      }
-                                                    }
-                                                  },
-                                                  minWidth: 200.0,
-                                                  height: 45.0,
-                                                  child: Text(
-                                                    "Sign in",
-                                                    style: GoogleFonts.poppins(
-                                                      fontSize: 25,
-                                                      fontWeight:
-                                                          FontWeight.w300,
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
+                                                              builder: (context) =>
+                                                                  HomePage()));
+                                                }
+                                              },
+                                              minWidth: 200.0,
+                                              height: 45.0,
+                                              child: Text(
+                                                "Sign in",
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.w300,
+                                                  color: Colors.white,
                                                 ),
                                               ),
                                             ),
+                                          ),
+                                        ),
                                       SizedBox(
                                         height: 15,
                                       ),

@@ -3,13 +3,41 @@ import 'package:bat/clothes.dart';
 import 'package:bat/feed_body.dart';
 
 import 'package:bat/home/notificationtest.dart';
-import 'package:bat/home/signin.dart';
+
 import 'package:bat/yadava.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+
+import 'login/authscreen.dart';
+
 void main() => runApp(new MyApp());
+
+class MyApps extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    final Future<FirebaseApp> _initialization = Firebase.initializeApp();
+    return FutureBuilder(
+      future: _initialization,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              home: StreamBuilder(
+                stream: FirebaseAuth.instance.authStateChanges(),
+                builder: (context, snapshot) {
+                  return AuthScreen();
+                },
+              ));
+        }
+        return CircularProgressIndicator();
+      },
+    );
+  }
+}
 
 // This app is a stateful, it tracks the user's current choice.
 class MyApp extends StatefulWidget {
@@ -73,8 +101,8 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 15, bottom: 15, right: 10),
             child: TextButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoginPage()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => MyApps()));
               },
               child: Text(
                 "Sign In",

@@ -1,16 +1,17 @@
 import 'package:bat/clothes.dart';
+import 'package:bat/components/homeslider.dart';
 import 'package:bat/components/sliderforclothes.dart';
 
 import 'package:flutter/material.dart';
 
-class MenMain extends StatefulWidget {
-  MenMain({Key? key}) : super(key: key);
+class MenMains extends StatefulWidget {
+  MenMains({Key? key}) : super(key: key);
 
   @override
-  _MenMainState createState() => _MenMainState();
+  _MenMainsState createState() => _MenMainsState();
 }
 
-class _MenMainState extends State<MenMain> {
+class _MenMainsState extends State<MenMains> {
   List<Map<String, Object>> list = [
     {
       'image':
@@ -26,15 +27,15 @@ class _MenMainState extends State<MenMain> {
     },
     {
       'image':
-          'https://4.imimg.com/data4/WM/GJ/MY-6907921/mens-sports-dress-500x500.jpg',
-      'itemname': 'Sports Set',
-      'itemprice': '1,299.00'
+          'https://th.bing.com/th/id/OIP.omtK7Z-693ED73hBb2gBwgHaHa?pid=ImgDet&rs=1',
+      'itemname': 'Nike Path Winter',
+      'itemprice': '1,099.00'
     },
     {
       'image':
-          'https://th.bing.com/th/id/OIP.PgOxP7zK475GJr2DEb7zaQHaHa?pid=ImgDet&rs=1',
-      'itemname': 'Running Combo Set',
-      'itemprice': '1,799.00'
+          'https://d34xpxcpbnz20f.cloudfront.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/n/i/nike_youth_bombax_turf_shoes_footwear_red.jpeg',
+      'itemname': 'Turf Shoes',
+      'itemprice': '3,599.00'
     },
     {
       'image':
@@ -44,9 +45,9 @@ class _MenMainState extends State<MenMain> {
     },
     {
       'image':
-          'https://5.imimg.com/data5/YS/XX/MY-8683446/men-sports-dress-500x500.jpg',
-      'itemname': 'Red Combo',
-      'itemprice': '2,000.00'
+          'https://rukminim1.flixcart.com/image/612/612/jtiz0cw0/kit/h/x/a/ccr-7-with-air-pump-74152-sbs-original-imafetszh7fagwmz.jpeg?q=70',
+      'itemname': 'SBS - CCR7',
+      'itemprice': '1,099.00'
     },
     {
       'image':
@@ -86,13 +87,13 @@ class _MenMainState extends State<MenMain> {
     },
     {
       'image':
-          'https://th.bing.com/th/id/OIP.uz_6hDpARO_-H0opbJo7PgHaHa?pid=ImgDet&rs=1',
-      'itemname': 'Grey Shorts',
-      'itemprice': '1,299.00'
+          'https://ethlits.com/media/catalog/product/cache/1/thumbnail/4f9502202b77059316180a23e4857517/s/s/ss_player_series_cricket_wicket_keeping_gloves_mens_size_ethlits.com_1_.jpg',
+      'itemname': 'WK Gloves',
+      'itemprice': '799.00'
     },
   ];
   @override
   Widget build(BuildContext context) {
-    return Slider1(list);
+    return Homeslider(list);
   }
 }

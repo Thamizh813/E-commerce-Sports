@@ -1,3 +1,4 @@
+import 'package:bat/home/payment.dart';
 import 'package:flutter/material.dart';
 
 class Addtocart extends StatelessWidget {
@@ -92,26 +93,32 @@ class Addtocart extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                Container(
-                  height: 60,
-                  width: 220,
-                  decoration: BoxDecoration(
-                      color: Colors.lightGreen[300],
-                      borderRadius: BorderRadius.circular(15),
-                      border: Border.all(color: Colors.white),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.black26,
-                            offset: Offset(-1, 2),
-                            spreadRadius: 2,
-                            blurRadius: 4)
-                      ]),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.shopping_cart),
-                      Text("     Shop Now")
-                    ],
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MySample()));
+                  },
+                  child: Container(
+                    height: 60,
+                    width: 220,
+                    decoration: BoxDecoration(
+                        color: Colors.lightGreen[300],
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(color: Colors.white),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.black26,
+                              offset: Offset(-1, 2),
+                              spreadRadius: 2,
+                              blurRadius: 4)
+                        ]),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.shopping_cart),
+                        Text("     Shop Now")
+                      ],
+                    ),
                   ),
                 ),
               ]),

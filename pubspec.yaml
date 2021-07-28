@@ -39,6 +39,8 @@ dependencies:
   email_validator: ^1.0.6
   font_awesome_flutter: ^9.1.0
   url_launcher: ^6.0.0-nullsafety
+  flutter_credit_card: ^2.0.0
+  
   
  
 
@@ -64,6 +66,7 @@ flutter:
     - 'lib/assets/login.png'
     - 'lib/assets/n.png'
     - 'assets/ddd.png'
+    - 'assets/'
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

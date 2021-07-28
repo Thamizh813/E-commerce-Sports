@@ -1,56 +1,56 @@
 import 'package:bat/components/sliderforsports.dart';
 import 'package:flutter/material.dart';
 
-class Cricketmain extends StatefulWidget {
-  Cricketmain({Key? key}) : super(key: key);
+class Cricketmain4 extends StatefulWidget {
+  Cricketmain4({Key? key}) : super(key: key);
 
   @override
-  _CricketmainState createState() => _CricketmainState();
+  _Cricketmain4State createState() => _Cricketmain4State();
 }
 
-class _CricketmainState extends State<Cricketmain> {
+class _Cricketmain4State extends State<Cricketmain4> {
   List<Map<String, Object>> list = [
     {
       'image':
           'https://images-na.ssl-images-amazon.com/images/I/41pRijlJJ1L._SY679_.jpg',
       'itemname': 'KOOKABURRA BEAST 6.3 CRI',
-      'itemprice': '2,299.00'
+      'itemprice': '1,299.00'
     },
     {
       'image':
-          'https://5.imimg.com/data5/CL/RC/QC/SELLER-81576955/cricket-helmet-500x500.jpg',
-      'itemname': 'CEAT bat',
-      'itemprice': '3,099.00'
+          'https://th.bing.com/th/id/OIP.omtK7Z-693ED73hBb2gBwgHaHa?pid=ImgDet&rs=1',
+      'itemname': 'Cricket shoe',
+      'itemprice': '999.00'
     },
     {
       'image':
-          'https://cdn.shopify.com/s/files/1/0257/4601/4261/products/f34562f2-286c-43b0-91fc-1a5f8ed65e6c_347x700.jpg?v=1596782184',
-      'itemname': 'SG bat',
-      'itemprice': '2,299.00'
+          'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto/nsdlrwjeuwwwvjad4ifk/sportswear-air-younger-short-sleeve-fleece-dress-2M9sS6.jpg',
+      'itemname': 'Night Black Dress',
+      'itemprice': '799.00'
     },
     {
       'image':
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtXY5m38wiAlVLgCfkD7kLsyBF661qDrXL2A&usqp=CAU',
-      'itemname': 'Cricket kit bag',
-      'itemprice': '7,299.00'
+          'https://5.imimg.com/data5/SELLER/Default/2020/10/MX/YQ/CY/21883350/dsc-beamer-cricket-shoes-grey-white-500x500.jpg',
+      'itemname': 'dsc shoe',
+      'itemprice': '499.00'
     },
     {
       'image':
           'https://www.sportsuncle.com/image/cache/catalog/images/kookaburra/1a1101m01-cricket-ball-turf-red-front-800x800.webp',
       'itemname': 'Kookubura turf ball',
-      'itemprice': '1,199.00'
+      'itemprice': '199.00'
     },
     {
       'image':
           'https://images-na.ssl-images-amazon.com/images/I/4125d5RJ%2BzL.jpg',
       'itemname': 'Count White ball',
-      'itemprice': '2,399.00'
+      'itemprice': '399.00'
     },
     {
       'image':
-          'https://images-na.ssl-images-amazon.com/images/I/51Q0Ph9JmdL.jpg',
-      'itemname': 'SG Helmet',
-      'itemprice': '999.00'
+          'https://th.bing.com/th/id/R.3b22cbcefd862e481b21ce1e975ad4ab?rik=am4GV5t%2fFZdWCg&riu=http%3a%2f%2fwww.prodirectselect.com%2fproductimages%2fV3_1_Main%2f165190.jpg&ehk=11SOnblSglu9cZBDuSwZ7CbLt7xqxeIaaYcxgv7VnAQ%3d&risl=&pid=ImgRaw',
+      'itemname': 'Down Fill Jacket',
+      'itemprice': '1,699.00'
     },
     {
       'image':
@@ -66,9 +66,9 @@ class _CricketmainState extends State<Cricketmain> {
     },
     {
       'image':
-          'https://www.sportsuncle.com/image/catalog/images/dsc/comdor-motion.jpg',
-      'itemname': 'DSC batting glove',
-      'itemprice': '599.00'
+          'https://th.bing.com/th/id/R.707b209a3eaa27ecb3ab4a37ba2daf4e?rik=0oxwoRyH7VqVdA&riu=http%3a%2f%2fs3.amazonaws.com%2fnikeinc%2fassets%2f17659%2fNike-Running-Womens-BOMBER_JACKET_2a_native_1600.jpg%3f1361379923&ehk=4SCAXDEdQjr4MjqG%2bg4IQMmq3RvnuxWSxusdkCOCxyc%3d&risl=&pid=ImgRaw',
+      'itemname': 'Running Spring',
+      'itemprice': '299.00'
     },
     {
       'image':

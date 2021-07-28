@@ -1,11 +1,19 @@
+import 'package:bat/home/payment.dart';
 import 'package:bat/home/signin.dart';
 import 'package:flutter/material.dart';
 
 import '../addtocart.dart';
 
-class Slider1 extends StatelessWidget {
+class Slider1 extends StatefulWidget {
   Slider1(this.name) : super();
   final List<Map<String, Object>> name;
+
+  @override
+  _Slider1State createState() => _Slider1State();
+}
+
+class _Slider1State extends State<Slider1> {
+  int _one = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +23,7 @@ class Slider1 extends StatelessWidget {
         color: Colors.white,
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: name.length,
+            itemCount: widget.name.length,
             itemBuilder: (BuildContext contex, index) {
               return InkWell(
                 onTap: () {
@@ -46,7 +54,7 @@ class Slider1 extends StatelessWidget {
                                   height: 300,
                                   width: 220,
                                   child: Image.network(
-                                    name[index]['image'].toString(),
+                                    widget.name[index]['image'].toString(),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -65,7 +73,8 @@ class Slider1 extends StatelessWidget {
                                       children: [
                                         SizedBox(height: 60),
                                         Text(
-                                          name[index]['itemname'].toString(),
+                                          widget.name[index]['itemname']
+                                              .toString(),
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                               color: Colors.black,
@@ -86,16 +95,24 @@ class Slider1 extends StatelessWidget {
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
                                           children: [
-                                            Card(
-                                              color: Colors.blue[50],
-                                              elevation: 15,
-                                              child: Container(
-                                                height: 30,
-                                                width: 80,
-                                                alignment: Alignment.center,
-                                                child: Text("small",
-                                                    style: TextStyle(
-                                                        letterSpacing: 2)),
+                                            GestureDetector(
+                                              onTap: () {
+                                                setState(() {
+                                                  _one = 1;
+                                                });
+                                              },
+                                              child: Card(
+                                                color: Colors.blue[50],
+                                                elevation: 15,
+                                                child: Container(
+                                                  height: 30,
+                                                  width: 80,
+                                                  alignment: Alignment.center,
+                                                  child: Text("small",
+                                                      style: TextStyle(
+                                                        letterSpacing: 2,
+                                                      )),
+                                                ),
                                               ),
                                             ),
                                             Card(
@@ -126,11 +143,13 @@ class Slider1 extends StatelessWidget {
                                             ),
                                           ],
                                         ),
+                                        if (_one == 1)
+                                          Text("Selected size : Small"),
                                         SizedBox(
                                           height: 20,
                                         ),
                                         Text(
-                                          "₹ ${name[index]['itemprice'].toString()}",
+                                          "₹ ${widget.name[index]['itemprice'].toString()}",
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 20,
@@ -142,20 +161,21 @@ class Slider1 extends StatelessWidget {
                                         GestureDetector(
                                           excludeFromSemantics: true,
                                           onTap: () {
-                                            print(name[index]['itemname']
+                                            print(widget.name[index]['itemname']
                                                 .toString());
                                             Navigator.push(
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
                                                         Addtocart(
-                                                          name[index]
+                                                          widget.name[index]
                                                                   ['itemname']
                                                               .toString(),
-                                                          name[index]
+                                                          widget.name[index]
                                                                   ['itemprice']
                                                               .toString(),
-                                                          name[index]['image']
+                                                          widget.name[index]
+                                                                  ['image']
                                                               .toString(),
                                                         )));
                                           },
@@ -195,7 +215,7 @@ class Slider1 extends StatelessWidget {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        LoginPage()));
+                                                        MySample()));
                                           },
                                           child: Container(
                                             height: 40,
@@ -254,7 +274,7 @@ class Slider1 extends StatelessWidget {
                             padding: EdgeInsets.all(10.0),
                             child: Container(
                               child: Image.network(
-                                name[index]['image'].toString(),
+                                widget.name[index]['image'].toString(),
                                 height: 200,
                               ),
                             ),
@@ -262,7 +282,7 @@ class Slider1 extends StatelessWidget {
                           Padding(
                             padding: EdgeInsets.symmetric(vertical: 8),
                             child: Text(
-                              "₹ ${name[index]['itemprice'].toString()}",
+                              "₹ ${widget.name[index]['itemprice'].toString()}",
                               style: TextStyle(
                                   color: Colors.deepOrange, fontSize: 15),
                             ),

@@ -1,4 +1,5 @@
 import 'package:bat/clothes.dart';
+import 'package:bat/home/outlet.dart';
 import 'package:bat/main.dart';
 import 'package:bat/yadava.dart';
 import 'package:flutter/material.dart';
@@ -97,7 +98,7 @@ class CategoriesCollection extends StatelessWidget {
             child: new FlatButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()));
+                    MaterialPageRoute(builder: (context) => OutPage()));
               },
               child: new Padding(
                 padding:

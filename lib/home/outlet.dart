@@ -1,19 +1,22 @@
 import 'package:bat/CategoriesCollection.dart';
 
-import 'package:bat/home/Men.dart';
+import 'package:bat/home/football.dart';
 import 'package:bat/home/footer.dart';
-import 'package:bat/home/kids.dart';
-import 'package:bat/home/notification.dart';
-import 'package:bat/home/notificationtest.dart';
-import 'package:bat/home/shoes.dart';
-import 'package:bat/home/women.dart';
+import 'package:bat/home/outlet25.dart';
+import 'package:bat/home/outlet70.dart';
+
 import 'package:bat/main.dart';
 import 'package:flutter/material.dart';
 
-import 'CarouselDemo.dart';
-import 'addtocart.dart';
+import '../CarouselDemo.dart';
+import '../addtocart.dart';
+import './/CarouselDemo.dart';
+import './/addtocart.dart';
+import './/home/cricket.dart';
 
-class ClothingPage extends StatelessWidget {
+//import 'package:bat/sports/cricket.dart';
+
+class OutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,27 +46,27 @@ class ClothingPage extends StatelessWidget {
                 )),
             Padding(
               padding: const EdgeInsets.only(top: 15, bottom: 15, right: 10),
-              // child: TextButton(
-              //   onPressed: () {
-              //     Navigator.push(context,
-              //         MaterialPageRoute(builder: (context) => LoginPage()));
-              //   },
-              //   child: Text(
-              //     "Sign In",
-              //     textAlign: TextAlign.center,
-              //     style: TextStyle(
-              //       fontSize: 20,
-              //       color: Colors.white,
-              //       fontWeight: FontWeight.w600,
-              //     ),
-              //   ),
-              // ),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MyApps()));
+                },
+                child: Text(
+                  "Sign In",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
             ),
             new IconButton(
                 icon: new Icon(Icons.notifications),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => notifytext()));
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (context) => Notify()));
                 }),
             new IconButton(
                 icon: new Icon(Icons.shopping_cart),
@@ -76,8 +79,8 @@ class ClothingPage extends StatelessWidget {
             new IconButton(
                 icon: new Icon(Icons.account_circle_outlined),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => notifytext()));
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (context) => Notify()));
                 }),
           ],
         ),
@@ -132,7 +135,7 @@ class ClothingPage extends StatelessWidget {
                 height: 50,
               ),
               Text(
-                "Kids Clothing",
+                "Discounts upto 70%",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.grey,
@@ -143,12 +146,12 @@ class ClothingPage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              Clothmain(),
+              Outlet(),
               SizedBox(
                 height: 30,
               ),
               Text(
-                "Men Clothing",
+                "Discounts upto 40%",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.grey,
@@ -159,12 +162,9 @@ class ClothingPage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              MenMain(),
-              SizedBox(
-                height: 30,
-              ),
+              Football(),
               Text(
-                "Women Clothing",
+                "Discounts upto 25%",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.grey,
@@ -175,26 +175,55 @@ class ClothingPage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              WomenMain(),
-              SizedBox(
-                height: 30,
-              ),
-              Text(
-                "Shoes",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Colors.grey,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 35,
-                    fontFamily: 'raleway'),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Shoemain(),
-              SizedBox(
-                height: 50,
-              ),
+              Cricketmain4(),
+              // Text(
+              //   "Sports shoes",
+              //   textAlign: TextAlign.center,
+              //   style: TextStyle(
+              //       color: Colors.grey,
+              //       fontWeight: FontWeight.w500,
+              //       fontSize: 35,
+              //       fontFamily: 'raleway'),
+              // ),
+              // SizedBox(
+              //   height: 30,
+              // ),
+              // Cricketmainshoe(),
+              // SizedBox(
+              //   height: 30,
+              // ),
+              // Text(
+              //   "Women Clothing",
+              //   textAlign: TextAlign.center,
+              //   style: TextStyle(
+              //       color: Colors.grey,
+              //       fontWeight: FontWeight.w500,
+              //       fontSize: 35,
+              //       fontFamily: 'raleway'),
+              // ),
+              // SizedBox(
+              //   height: 30,
+              // ),
+              // WomenMain(),
+              // SizedBox(
+              //   height: 30,
+              // ),
+              // Text(
+              //   "Shoes",
+              //   textAlign: TextAlign.center,
+              //   style: TextStyle(
+              //       color: Colors.grey,
+              //       fontWeight: FontWeight.w500,
+              //       fontSize: 35,
+              //       fontFamily: 'raleway'),
+              // ),
+              // SizedBox(
+              //   height: 30,
+              // ),
+              // Shoemain(),
+              // SizedBox(
+              //   height: 50,
+              // ),
               Footer(),
             ]),
           ),

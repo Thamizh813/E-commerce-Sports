@@ -1,4 +1,5 @@
 import 'package:bat/addtocart.dart';
+import 'package:bat/home/payment.dart';
 import 'package:bat/home/signin.dart';
 import 'package:flutter/material.dart';
 
@@ -198,7 +199,7 @@ class Cricketmaterial extends StatelessWidget {
                                                   context,
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          LoginPage()));
+                                                          MySample()));
                                             },
                                             child: Container(
                                               height: 40,

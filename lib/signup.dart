@@ -1,21 +1,12 @@
 import 'package:bat/home/authentication.dart/fire_auth.dart';
 import 'package:bat/home/authentication.dart/validator.dart';
 
-import 'package:bat/withoutssignin/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
-class Register extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: RegisterPage(),
-    );
-  }
-}
+import 'main.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -215,7 +206,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             if (user != null) {
                               Navigator.of(context).pushAndRemoveUntil(
                                 MaterialPageRoute(
-                                  builder: (context) => HomePage1(),
+                                  builder: (context) => HomePage(),
                                 ),
                                 ModalRoute.withName('/'),
                               );

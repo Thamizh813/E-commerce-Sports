@@ -1,3 +1,4 @@
+import 'package:bat/home/payment.dart';
 import 'package:bat/home/signin.dart';
 import 'package:flutter/material.dart';
 
@@ -196,7 +197,7 @@ class Shoes extends StatelessWidget {
                                                   context,
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          LoginPage()));
+                                                          MySample()));
                                             },
                                             child: Container(
                                               height: 40,
