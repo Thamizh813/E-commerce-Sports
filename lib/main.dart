@@ -5,6 +5,7 @@ import 'package:bat/feed_body.dart';
 import 'package:bat/home/notificationtest.dart';
 import 'package:bat/home/signin.dart';
 import 'package:bat/yadava.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -116,9 +117,20 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class Draw extends StatelessWidget {
-  const Draw({Key? key}) : super(key: key);
+class Draw extends StatefulWidget {
+  Draw({Key? key}) : super(key: key);
 
+  @override
+  _DrawState createState() => _DrawState();
+}
+
+final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+
+_signOut() async {
+  await _firebaseAuth.signOut();
+}
+
+class _DrawState extends State<Draw> {
   @override
   Widget build(BuildContext context) {
     return new Drawer(
@@ -202,7 +214,15 @@ class Draw extends StatelessWidget {
           new ListTile(
             title: new Text('Logout'),
             leading: new Icon(Icons.remove_circle_outline),
-            onTap: () {},
+            onTap: () async {
+              await _signOut();
+              if (_firebaseAuth.currentUser == null) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
+              }
+            },
           ),
           new ListTile(
             title: new Text('About us'),
