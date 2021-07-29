@@ -4,6 +4,7 @@ import 'package:bat/home/Men.dart';
 import 'package:bat/home/footer.dart';
 import 'package:bat/home/kids.dart';
 import 'package:bat/home/notification.dart';
+import 'package:bat/home/notificationtest.dart';
 import 'package:bat/home/shoes.dart';
 import 'package:bat/home/women.dart';
 import 'package:bat/main.dart';
@@ -41,44 +42,44 @@ class ClothingPage extends StatelessWidget {
                   height: 40,
                   width: 60,
                 )),
-            Padding(
-              padding: const EdgeInsets.only(top: 15, bottom: 15, right: 10),
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MyApps()));
-                },
-                child: Text(
-                  "Sign In",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.only(top: 15, bottom: 15, right: 10),
+            //   child: TextButton(
+            //     onPressed: () {
+            //       Navigator.push(context,
+            //           MaterialPageRoute(builder: (context) => MyApps()));
+            //     },
+            //     child: Text(
+            //       "Sign In",
+            //       textAlign: TextAlign.center,
+            //       style: TextStyle(
+            //         fontSize: 20,
+            //         color: Colors.white,
+            //         fontWeight: FontWeight.w600,
+            //       ),
+            //     ),
+            //   ),
+            // ),
             new IconButton(
                 icon: new Icon(Icons.notifications),
                 onPressed: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => Notify()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => notifytext()));
                 }),
-            new IconButton(
-                icon: new Icon(Icons.shopping_cart),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Addtocart('', '', '')));
-                }),
-            new IconButton(
-                icon: new Icon(Icons.account_circle_outlined),
-                onPressed: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => Notify()));
-                }),
+            // new IconButton(
+            //     icon: new Icon(Icons.shopping_cart),
+            //     onPressed: () {
+            //       Navigator.push(
+            //           context,
+            //           MaterialPageRoute(
+            //               builder: (context) => Addtocart('', '', '')));
+            //     }),
+            // new IconButton(
+            //     icon: new Icon(Icons.account_circle_outlined),
+            //     onPressed: () {
+            //       // Navigator.push(context,
+            //       //     MaterialPageRoute(builder: (context) => Notify()));
+            //     }),
           ],
         ),
         drawer: Draw(),

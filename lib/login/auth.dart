@@ -61,7 +61,7 @@ class _AuthFormState extends State<AuthForm> {
               padding: const EdgeInsets.only(left: 70),
               child: SizedBox(
                 child: Image.asset("assets/ddd.png"),
-                height: 200,
+                height: 120,
                 width: 350,
               ),
             ),

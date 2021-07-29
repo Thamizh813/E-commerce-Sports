@@ -10,36 +10,38 @@ class Feed_body extends StatelessWidget {
       children: <Widget>[
         Container(
           color: Colors.black,
-          child: Row(
-            children: [
-              Container(
-                color: Colors.black,
-                child: CategoriesCollection(),
-              ),
-              Container(
+          child: SingleChildScrollView(
+            child: Row(
+              children: [
+                Container(
                   color: Colors.black,
-                  child: FlatButton(
-                    onPressed: () {
-                      Navigator.of(context).pushNamed("/notifications");
-                    },
+                  child: CategoriesCollection(),
+                ),
+                Container(
                     color: Colors.black,
-                    child: new Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        new Icon(
-                          Icons.search,
-                          color: Colors.grey,
-                        ),
-                        new Padding(
-                          padding: const EdgeInsets.all(0.0),
-                        ),
-                        new Text('Search for Products, Brands and More',
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(color: Colors.grey))
-                      ],
-                    ),
-                  )),
-            ],
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed("/notifications");
+                      },
+                      color: Colors.black,
+                      child: new Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          new Icon(
+                            Icons.search,
+                            color: Colors.grey,
+                          ),
+                          new Padding(
+                            padding: const EdgeInsets.all(0.0),
+                          ),
+                          new Text('Search for Products, Brands and More',
+                              textAlign: TextAlign.center,
+                              style: new TextStyle(color: Colors.grey))
+                        ],
+                      ),
+                    )),
+              ],
+            ),
           ),
         ),
         new Flexible(

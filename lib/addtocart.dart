@@ -1,4 +1,5 @@
 import 'package:bat/home/payment.dart';
+import 'package:bat/main.dart';
 import 'package:flutter/material.dart';
 
 class Addtocart extends StatelessWidget {
@@ -125,23 +126,32 @@ class Addtocart extends StatelessWidget {
               SizedBox(
                 width: 400,
               ),
-              Container(
-                height: 60,
-                width: 220,
-                decoration: BoxDecoration(
-                    color: Colors.redAccent[100],
-                    borderRadius: BorderRadius.circular(15),
-                    border: Border.all(color: Colors.white),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black26,
-                          offset: Offset(-1, 2),
-                          spreadRadius: 2,
-                          blurRadius: 4)
-                    ]),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [Icon(Icons.cancel), Text("     Remove from cart")],
+              InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
+                },
+                child: Container(
+                  height: 60,
+                  width: 220,
+                  decoration: BoxDecoration(
+                      color: Colors.redAccent[100],
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(color: Colors.white),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black26,
+                            offset: Offset(-1, 2),
+                            spreadRadius: 2,
+                            blurRadius: 4)
+                      ]),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.cancel),
+                      Text("     Remove from cart")
+                    ],
+                  ),
                 ),
               )
             ]),

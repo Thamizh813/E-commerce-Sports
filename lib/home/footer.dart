@@ -162,7 +162,8 @@ class Footer extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.only(top: 20, left: 158),
                   child: InkWell(
-                    onTap: () => launch("https://www.nike.com/in/help/a/shipping-delivery-gs"),
+                    onTap: () => launch(
+                        "https://www.nike.com/in/help/a/shipping-delivery-gs"),
                     child: Text(
                       "DELIVERY",
                       style: TextStyle(
@@ -190,7 +191,8 @@ class Footer extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.only(top: 20, left: 125),
                   child: InkWell(
-                    onTap: () => launch("https://www.nike.com/in/help/a/student-discount-gs"),
+                    onTap: () => launch(
+                        "https://www.nike.com/in/help/a/student-discount-gs"),
                     child: Text(
                       "STUDENT DISCOUNTS",
                       style: TextStyle(
@@ -202,7 +204,8 @@ class Footer extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.only(top: 20, left: 148),
                   child: InkWell(
-                    onTap: () => launch("https://www.nike.com/in/help/a/returns-policy-gs"),
+                    onTap: () => launch(
+                        "https://www.nike.com/in/help/a/returns-policy-gs"),
                     child: Text(
                       "RETURNS",
                       style: TextStyle(
@@ -214,7 +217,8 @@ class Footer extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 20, left: 194),
                 child: InkWell(
-                  onTap: () => launch("https://investors.nike.com/Home/default.aspx"),
+                  onTap: () =>
+                      launch("https://investors.nike.com/Home/default.aspx"),
                   child: Text(
                     "INVESTORS",
                     style: TextStyle(
@@ -243,7 +247,8 @@ class Footer extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.only(top: 20, left: 158),
                   child: InkWell(
-                    onTap: () => launch("https://www.nike.com/in/help/a/payment-options-gs"),
+                    onTap: () => launch(
+                        "https://www.nike.com/in/help/a/payment-options-gs"),
                     child: Text(
                       "PAYMENT OPTIONS",
                       style: TextStyle(
@@ -255,7 +260,8 @@ class Footer extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.only(top: 20, left: 130),
                   child: InkWell(
-                    onTap: () => launch("https://www.nike.com/in/sustainability"),
+                    onTap: () =>
+                        launch("https://www.nike.com/in/sustainability"),
                     child: Text(
                       "SUSTAINABILITY",
                       style: TextStyle(
@@ -284,7 +290,8 @@ class Footer extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: InkWell(
-                    onTap: () => launch("https://www.eshopworld.com/shoppers/help/terms-and-conditions-of-sale-en/"),
+                    onTap: () => launch(
+                        "https://www.eshopworld.com/shoppers/help/terms-and-conditions-of-sale-en/"),
                     child: Text(
                       "Terms of sale",
                       style: TextStyle(
@@ -296,7 +303,8 @@ class Footer extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: InkWell(
-                    onTap: () => launch("https://agreementservice.svs.nike.com/in/en_gb/rest/agreement?agreementType=termsOfUse&uxId=com.nike&country=IN&language=en&requestType=redirect"),
+                    onTap: () => launch(
+                        "https://agreementservice.svs.nike.com/in/en_gb/rest/agreement?agreementType=termsOfUse&uxId=com.nike&country=IN&language=en&requestType=redirect"),
                     child: Text(
                       "Terms of use",
                       style: TextStyle(
@@ -308,7 +316,8 @@ class Footer extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: InkWell(
-                    onTap: () => launch("https://agreementservice.svs.nike.com/sg/en_gb/rest/agreement?agreementType=privacyPolicy&uxId=com.nike.unite&country=SG&language=en&requestType=redirect"),
+                    onTap: () => launch(
+                        "https://agreementservice.svs.nike.com/sg/en_gb/rest/agreement?agreementType=privacyPolicy&uxId=com.nike.unite&country=SG&language=en&requestType=redirect"),
                     child: Text(
                       "Nike Privacy Policy",
                       style: TextStyle(

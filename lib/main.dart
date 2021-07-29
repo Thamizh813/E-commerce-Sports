@@ -1,8 +1,11 @@
 import 'package:bat/addtocart.dart';
 import 'package:bat/clothes.dart';
 import 'package:bat/feed_body.dart';
+import 'package:bat/home/accountnamepage.dart';
 
 import 'package:bat/home/notificationtest.dart';
+import 'package:bat/home/outlet.dart';
+import 'package:bat/home/outlet70.dart';
 
 import 'package:bat/yadava.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -122,20 +125,20 @@ class HomePage extends StatelessWidget {
             },
             icon: Icon(Icons.notifications),
           ),
-          new IconButton(
-              icon: new Icon(Icons.shopping_cart),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Addtocart('', '', '')));
-              }),
           // new IconButton(
-          //     icon: new Icon(Icons.account_circle_outlined),
+          //     icon: new Icon(Icons.shopping_cart),
           //     onPressed: () {
-          //       Navigator.push(context,
-          //           MaterialPageRoute(builder: (context) => notifytext()));
+          //       Navigator.push(
+          //           context,
+          //           MaterialPageRoute(
+          //               builder: (context) => Addtocart('', '', '')));
           //     }),
+          new IconButton(
+              icon: new Icon(Icons.account_circle_outlined),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Account()));
+              }),
         ],
       ), //AppBar
       drawer: Draw(),
@@ -194,6 +197,15 @@ class _DrawState extends State<Draw> {
                   : Colors.white),
 
           new ListTile(
+            title: new Text('Home'),
+            leading: new Icon(Icons.remove_circle_outline),
+            onTap: () async {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => HomePage()));
+            },
+          ),
+
+          new ListTile(
             title: new Text('Clothings'),
             leading: new Icon(Icons.shopping_bag_rounded),
             onTap: () {
@@ -212,33 +224,36 @@ class _DrawState extends State<Draw> {
           new ListTile(
             title: new Text('Offer Zone'),
             leading: new Icon(Icons.local_offer),
-            onTap: () {},
-          ), //List Tile 5
-          new ListTile(
-            title: new Text('My Cart'),
-            leading: new Icon(Icons.shopping_cart),
             onTap: () {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Addtocart('', '', '')));
+                  context, MaterialPageRoute(builder: (context) => OutPage()));
             },
-          ), //List Tile 6
+          ), //List Tile 5
+          // new ListTile(
+          //   title: new Text('My Cart'),
+          //   leading: new Icon(Icons.shopping_cart),
+          //   onTap: () {
+          //     Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //             builder: (context) => Addtocart('', '', '')));
+          //   },
+          // ), //List Tile 6
           // new ListTile(
           //   title: new Text('My Wishlist'),
           //   leading: new Icon(Icons.favorite),
           //   onTap: () {},
           // ), //List Tile 7
-          new ListTile(
-            title: new Text('My Orders'),
-            leading: new Icon(Icons.account_balance_wallet),
-            onTap: () {},
-          ), //List Tile 8
-          new ListTile(
-            title: new Text('My Account'),
-            leading: new Icon(Icons.account_box),
-            onTap: () {},
-          ), //List Tile 9
+          // new ListTile(
+          //   title: new Text('My Orders'),
+          //   leading: new Icon(Icons.account_balance_wallet),
+          //   onTap: () {},
+          // ), //List Tile 8
+          // new ListTile(
+          //   title: new Text('My Account'),
+          //   leading: new Icon(Icons.account_box),
+          //   onTap: () {},
+          // ), //List Tile 9
           // new ListTile(
           //   title: new Text('Logout'),
           //   leading: new Icon(Icons.remove_circle_outline),
@@ -246,11 +261,11 @@ class _DrawState extends State<Draw> {
 
           //   },
           // ),
-          new ListTile(
-            title: new Text('About us'),
-            leading: new Icon(Icons.info),
-            onTap: () {},
-          ), //List Tile 10
+          // new ListTile(
+          //   title: new Text('About us'),
+          //   leading: new Icon(Icons.info),
+          //   onTap: () {},
+          // ), //List Tile 10
         ],
         padding: EdgeInsets.zero,
       ), //parent ListView
