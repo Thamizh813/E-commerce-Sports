@@ -10,6 +10,10 @@ import 'package:flutter_credit_card/flutter_credit_card.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class MySample extends StatefulWidget {
+  MySample(this.itemimg, this.itemname, this.itemprice);
+  final String itemprice;
+  final String itemname;
+  final String itemimg;
   @override
   State<StatefulWidget> createState() {
     return MySampleState();
@@ -56,6 +60,92 @@ class MySampleState extends State<MySample> {
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
+              Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Container(
+                  height: 400,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Colors.blue[50],
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey,
+                            offset: Offset(1, 2),
+                            spreadRadius: 3,
+                            blurRadius: 2),
+                      ],
+                      borderRadius: BorderRadius.circular(15)),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 50, vertical: 30),
+                    child: Row(children: [
+                      Container(
+                        height: 300,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  offset: Offset(1, 2),
+                                  spreadRadius: 3,
+                                  blurRadius: 2),
+                            ],
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Image.network(
+                          widget.itemimg.toString(),
+                          height: 200,
+                          width: 240,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 100,
+                      ),
+                      Column(children: [
+                        SizedBox(
+                          height: 50,
+                        ),
+                        Text(
+                          widget.itemname.toString(),
+                          style: TextStyle(
+                              fontSize: 30,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text("In-Stock",
+                            style: TextStyle(
+                                fontSize: 25,
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w600)),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text("Itemcount :  1",
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w600)),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text("INR : ${widget.itemprice.toString()}",
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w600)),
+                        SizedBox(
+                          height: 30,
+                        ),
+                      ]),
+                      SizedBox(
+                        width: 400,
+                      ),
+                    ]),
+                  ),
+                ),
+              ),
               CreditCardWidget(
                 cardNumber: cardNumber,
                 expiryDate: expiryDate,

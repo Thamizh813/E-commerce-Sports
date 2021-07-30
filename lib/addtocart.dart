@@ -96,8 +96,11 @@ class Addtocart extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MySample()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MySample(image.toString(),
+                                itemname.toString(), price.toString())));
                   },
                   child: Container(
                     height: 60,

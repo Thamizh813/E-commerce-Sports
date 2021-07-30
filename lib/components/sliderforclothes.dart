@@ -215,7 +215,16 @@ class _Slider1State extends State<Slider1> {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        MySample()));
+                                                        MySample(
+                                                            widget.name[index]
+                                                                    ['image']
+                                                                .toString(),
+                                                            widget.name[index]
+                                                                    ['itemname']
+                                                                .toString(),
+                                                            widget.name[index][
+                                                                    'itemprice']
+                                                                .toString())));
                                           },
                                           child: Container(
                                             height: 40,

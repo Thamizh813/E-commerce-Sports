@@ -199,7 +199,21 @@ class Cricketmaterial extends StatelessWidget {
                                                   context,
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          MySample()));
+                                                          MySample(
+                                                              cricketmaterial[
+                                                                          index]
+                                                                      ['image']
+                                                                  .toString(),
+                                                              cricketmaterial[
+                                                                          index]
+                                                                      [
+                                                                      'itemname']
+                                                                  .toString(),
+                                                              cricketmaterial[
+                                                                          index]
+                                                                      [
+                                                                      'itemprice']
+                                                                  .toString())));
                                             },
                                             child: Container(
                                               height: 40,

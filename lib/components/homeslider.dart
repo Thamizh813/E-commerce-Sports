@@ -196,7 +196,15 @@ class Homeslider extends StatelessWidget {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        MySample()));
+                                                        MySample(
+                                                            name[index]['image']
+                                                                .toString(),
+                                                            name[index]
+                                                                    ['itemname']
+                                                                .toString(),
+                                                            name[index][
+                                                                    'itemprice']
+                                                                .toString())));
                                           },
                                           child: Container(
                                             height: 40,
