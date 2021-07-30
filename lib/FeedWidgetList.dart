@@ -5,6 +5,7 @@ import 'package:bat/home/cricket.dart';
 import 'package:bat/home/footer.dart';
 import 'package:bat/home/homeclothes.dart';
 import 'package:bat/home/homeshoes.dart';
+import 'package:bat/main.dart';
 import 'package:bat/yadava.dart';
 
 import 'package:flutter/material.dart';
@@ -53,7 +54,7 @@ class FeedWidgetList extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ClothingPage()));
+                                  builder: (context) => MyApps()));
                         },
                         child: new Text(
                           "View All",
@@ -97,7 +98,7 @@ class FeedWidgetList extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ClothingPage()));
+                                  builder: (context) => MyApps()));
                         },
                         child: new Text(
                           "View All",
