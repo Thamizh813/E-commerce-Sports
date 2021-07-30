@@ -1,9 +1,11 @@
 import 'package:bat/CategoriesCollection.dart';
 import 'package:bat/FeedWidgetList.dart';
 import 'package:bat/categoriescollectiononlyhome.dart';
+import 'package:bat/homewithsign/FeedWidgetList.dart';
+import 'package:bat/homewithsign/catwithhome.dart';
 import 'package:flutter/material.dart';
 
-class Feed_body extends StatelessWidget {
+class Feed_body1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Column(
@@ -16,13 +18,13 @@ class Feed_body extends StatelessWidget {
               children: [
                 Container(
                   color: Colors.black,
-                  child: CategoriesCollection1(),
+                  child: CategoriesCollection2(),
                 ),
                 Container(
                     color: Colors.black,
                     child: FlatButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed("/notifications");
+                        // Navigator.of(context).pushNamed("/notifications");
                       },
                       color: Colors.black,
                       child: new Row(
@@ -46,7 +48,7 @@ class Feed_body extends StatelessWidget {
           ),
         ),
         new Flexible(
-          child: FeedWidgetList(),
+          child: FeedWidgetList1(),
         ),
       ],
     );

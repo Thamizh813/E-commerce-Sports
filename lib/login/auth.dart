@@ -1,3 +1,5 @@
+import 'package:bat/clothes.dart';
+import 'package:bat/homewithsign/homwithsign.dart';
 import 'package:bat/main.dart';
 import 'package:flutter/material.dart';
 
@@ -123,19 +125,20 @@ class _AuthFormState extends State<AuthForm> {
                             height: 20,
                           ),
                           if (widget.isloading) CircularProgressIndicator(),
-                          if (!widget.isloading)
-                            RaisedButton(
-                              color: Colors.black,
-                              textColor: Colors.grey,
-                              child: Text(isLogin ? 'Login' : 'Signup'),
-                              onPressed: _trysubmit,
-                              onLongPress: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => HomePage()));
-                              },
-                            ),
+                          // if (!widget.isloading)
+                          RaisedButton(
+                            color: Colors.black,
+                            textColor: Colors.grey,
+                            child: Text(isLogin ? 'Login' : 'Signup'),
+                            onPressed: _trysubmit,
+                            onLongPress: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          HomePagewithsign()));
+                            },
+                          ),
                           if (!widget.isloading)
                             FlatButton(
                                 textColor: Theme.of(context).primaryColor,

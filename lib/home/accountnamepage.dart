@@ -1,6 +1,8 @@
 import 'dart:html';
 import 'dart:ui';
 
+import 'package:bat/clothes.dart';
+import 'package:bat/home/account.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -183,6 +185,15 @@ class _AccountState extends State<Account> {
                               })
                               .then((value) => print('details added'))
                               .catchError((error) => print('error in order'));
+                        }
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Accountresult()));
+                        if (_formKey.currentState!.validate()) {
+                          print('valid!');
+                        } else {
+                          print('invalid!');
                         }
                       },
                       color: Colors.black,

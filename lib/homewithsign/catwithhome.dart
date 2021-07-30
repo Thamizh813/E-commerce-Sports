@@ -1,10 +1,11 @@
 import 'package:bat/clothes.dart';
 import 'package:bat/home/outlet.dart';
+import 'package:bat/homewithsign/homwithsign.dart';
 import 'package:bat/main.dart';
 import 'package:bat/yadava.dart';
 import 'package:flutter/material.dart';
 
-class CategoriesCollection extends StatelessWidget {
+class CategoriesCollection2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
@@ -17,31 +18,33 @@ class CategoriesCollection extends StatelessWidget {
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          // new Container(
-          //   alignment: Alignment.centerLeft,
-          //   height: 90.0,
-          //   color: Colors.black,
-          //   child: new FlatButton(
-          //       onPressed: () {
-          //         Navigator.push(context,
-          //             MaterialPageRoute(builder: (context) => HomePage()));
-          //       },
-          //       child: new Padding(
-          //         padding: const EdgeInsets.only(
-          //             top: 12, bottom: 12, left: 100, right: 70),
-          //         child: SingleChildScrollView(
-          //           child: new Column(
-          //             children: <Widget>[
-          //               new Icon(Icons.home, color: Colors.white),
-          //               new Padding(padding: new EdgeInsets.only(bottom: 3.0)),
-          //               new Text("Home",
-          //                   textAlign: TextAlign.center,
-          //                   style: new TextStyle(color: Colors.white)),
-          //             ],
-          //           ),
-          //         ),
-          //       )),
-          // ),
+          new Container(
+            alignment: Alignment.centerLeft,
+            height: 90.0,
+            color: Colors.black,
+            child: new FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => HomePagewithsign()));
+                },
+                child: new Padding(
+                  padding: const EdgeInsets.only(
+                      top: 12, bottom: 12, left: 100, right: 70),
+                  child: SingleChildScrollView(
+                    child: new Column(
+                      children: <Widget>[
+                        new Icon(Icons.home, color: Colors.white),
+                        new Padding(padding: new EdgeInsets.only(bottom: 3.0)),
+                        new Text("Home",
+                            textAlign: TextAlign.center,
+                            style: new TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                  ),
+                )),
+          ),
           new Container(
             alignment: Alignment.center,
             color: Colors.black,

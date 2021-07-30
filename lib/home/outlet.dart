@@ -1,9 +1,12 @@
 import 'package:bat/CategoriesCollection.dart';
+import 'package:bat/home/account.dart';
 
 import 'package:bat/home/football.dart';
 import 'package:bat/home/footer.dart';
+import 'package:bat/home/notificationtest.dart';
 import 'package:bat/home/outlet25.dart';
 import 'package:bat/home/outlet70.dart';
+import 'package:bat/homewithsign/catwithhome.dart';
 
 import 'package:bat/main.dart';
 import 'package:flutter/material.dart';
@@ -44,47 +47,47 @@ class OutPage extends StatelessWidget {
                   height: 40,
                   width: 60,
                 )),
-            Padding(
-              padding: const EdgeInsets.only(top: 15, bottom: 15, right: 10),
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MyApps()));
-                },
-                child: Text(
-                  "Sign In",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.only(top: 15, bottom: 15, right: 10),
+            //   child: TextButton(
+            //     onPressed: () {
+            //       Navigator.push(context,
+            //           MaterialPageRoute(builder: (context) => MyApps()));
+            //     },
+            //     child: Text(
+            //       "Sign In",
+            //       textAlign: TextAlign.center,
+            //       style: TextStyle(
+            //         fontSize: 20,
+            //         color: Colors.white,
+            //         fontWeight: FontWeight.w600,
+            //       ),
+            //     ),
+            //   ),
+            // ),
             new IconButton(
                 icon: new Icon(Icons.notifications),
                 onPressed: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => Notify()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => notifytext()));
                 }),
-            new IconButton(
-                icon: new Icon(Icons.shopping_cart),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => Addtocart('', '', '')));
-                }),
+            // new IconButton(
+            //     icon: new Icon(Icons.shopping_cart),
+            //     onPressed: () {
+            //       Navigator.push(
+            //           context,
+            //           MaterialPageRoute(
+            //               builder: (context) => Addtocart('', '', '')));
+            //     }),
             new IconButton(
                 icon: new Icon(Icons.account_circle_outlined),
                 onPressed: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => Notify()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Accountresult()));
                 }),
           ],
         ),
-        drawer: Draw(),
+        drawer: Draw1(),
         body: Column(children: [
           Container(
             color: Colors.black,
@@ -92,7 +95,7 @@ class OutPage extends StatelessWidget {
               children: [
                 Container(
                   color: Colors.black,
-                  child: CategoriesCollection(),
+                  child: CategoriesCollection2(),
                 ),
                 Container(
                     color: Colors.black,

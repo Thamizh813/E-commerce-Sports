@@ -1,12 +1,15 @@
 import 'package:bat/CategoriesCollection.dart';
 
 import 'package:bat/home/Men.dart';
+import 'package:bat/home/account.dart';
+import 'package:bat/home/accountnamepage.dart';
 import 'package:bat/home/footer.dart';
 import 'package:bat/home/kids.dart';
 import 'package:bat/home/notification.dart';
 import 'package:bat/home/notificationtest.dart';
 import 'package:bat/home/shoes.dart';
 import 'package:bat/home/women.dart';
+import 'package:bat/homewithsign/catwithhome.dart';
 import 'package:bat/main.dart';
 import 'package:flutter/material.dart';
 
@@ -42,24 +45,24 @@ class ClothingPage extends StatelessWidget {
                   height: 40,
                   width: 60,
                 )),
-            // Padding(
-            //   padding: const EdgeInsets.only(top: 15, bottom: 15, right: 10),
-            //   child: TextButton(
-            //     onPressed: () {
-            //       Navigator.push(context,
-            //           MaterialPageRoute(builder: (context) => MyApps()));
-            //     },
-            //     child: Text(
-            //       "Sign In",
-            //       textAlign: TextAlign.center,
-            //       style: TextStyle(
-            //         fontSize: 20,
-            //         color: Colors.white,
-            //         fontWeight: FontWeight.w600,
-            //       ),
-            //     ),
-            //   ),
-            // ),
+            Padding(
+              padding: const EdgeInsets.only(top: 15, bottom: 15, right: 10),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MyApps()));
+                },
+                child: Text(
+                  "Log Out",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ),
             new IconButton(
                 icon: new Icon(Icons.notifications),
                 onPressed: () {
@@ -74,15 +77,15 @@ class ClothingPage extends StatelessWidget {
             //           MaterialPageRoute(
             //               builder: (context) => Addtocart('', '', '')));
             //     }),
-            // new IconButton(
-            //     icon: new Icon(Icons.account_circle_outlined),
-            //     onPressed: () {
-            //       // Navigator.push(context,
-            //       //     MaterialPageRoute(builder: (context) => Notify()));
-            //     }),
+            new IconButton(
+                icon: new Icon(Icons.account_circle_outlined),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Account()));
+                }),
           ],
         ),
-        drawer: Draw(),
+        drawer: Draw1(),
         body: Column(children: [
           Container(
             color: Colors.black,
@@ -90,7 +93,7 @@ class ClothingPage extends StatelessWidget {
               children: [
                 Container(
                   color: Colors.black,
-                  child: CategoriesCollection(),
+                  child: CategoriesCollection2(),
                 ),
                 Container(
                     color: Colors.black,

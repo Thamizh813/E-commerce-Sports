@@ -1,8 +1,11 @@
 import 'package:bat/CategoriesCollection.dart';
+import 'package:bat/home/account.dart';
 
 import 'package:bat/home/football.dart';
 import 'package:bat/home/footer.dart';
 import 'package:bat/home/notificationtest.dart';
+import 'package:bat/homewithsign/catwithhome.dart';
+import 'package:bat/homewithsign/homwithsign.dart';
 
 import 'package:bat/main.dart';
 import 'package:flutter/material.dart';
@@ -39,24 +42,24 @@ class ResultPage extends StatelessWidget {
                 height: 40,
                 width: 60,
               )),
-          // Padding(
-          //   padding: const EdgeInsets.only(top: 15, bottom: 15, right: 10),
-          //   child: TextButton(
-          //     onPressed: () {
-          //       Navigator.push(
-          //           context, MaterialPageRoute(builder: (context) => MyApps()));
-          //     },
-          //     child: Text(
-          //       "Sign In",
-          //       textAlign: TextAlign.center,
-          //       style: TextStyle(
-          //         fontSize: 20,
-          //         color: Colors.white,
-          //         fontWeight: FontWeight.w600,
-          //       ),
-          //     ),
-          //   ),
-          // ),
+          Padding(
+            padding: const EdgeInsets.only(top: 15, bottom: 15, right: 10),
+            child: TextButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
+              },
+              child: Text(
+                "Log out",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ),
           new IconButton(
               icon: new Icon(Icons.notifications),
               onPressed: () {
@@ -75,11 +78,11 @@ class ResultPage extends StatelessWidget {
               icon: new Icon(Icons.account_circle_outlined),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => notifytext()));
+                    MaterialPageRoute(builder: (context) => Accountresult()));
               }),
         ],
       ),
-      drawer: Draw(),
+      drawer: Draw1(),
       body: SingleChildScrollView(
         child: Column(children: [
           Container(
@@ -88,13 +91,13 @@ class ResultPage extends StatelessWidget {
               children: [
                 Container(
                   color: Colors.black,
-                  child: CategoriesCollection(),
+                  child: CategoriesCollection2(),
                 ),
                 Container(
                     color: Colors.black,
                     child: FlatButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed("/notifications");
+                        // Navigator.of(context).pushNamed("/notifications");
                       },
                       color: Colors.black,
                       child: new Row(
@@ -133,8 +136,8 @@ class ResultPage extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => HomePage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomePagewithsign()));
             },
             child: Container(
               padding: EdgeInsets.all(5),
