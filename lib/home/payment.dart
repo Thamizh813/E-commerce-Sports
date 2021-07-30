@@ -438,6 +438,8 @@ class MySampleState extends State<MySample> {
                                 'phone_no': phone_no,
                                 'prefrerable_delivery_date':
                                     deliverydateController.text,
+                                'itemname': widget.itemname.toString(),
+                                'itemprice': widget.itemprice.toString(),
                               })
                               .then((value) => print('details added'))
                               .catchError((error) => print('error in order'));

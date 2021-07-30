@@ -1,6 +1,7 @@
 import 'package:bat/homewithsign/homwithsign.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Accountresult extends StatefulWidget {
   Accountresult({Key? key}) : super(key: key);
@@ -35,12 +36,23 @@ class _AccountresultState extends State<Accountresult> {
               return Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    SizedBox(
+                      height: 30,
+                    ),
+                    CircleAvatar(
+                      radius: 100,
+                      backgroundColor: Colors.grey,
+                      backgroundImage: AssetImage('lib/assets/Nikes.jpg'),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
                     Container(
                       child: Center(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            document['name'],
+                            "Name :    ${document['name']}",
                             style: TextStyle(
                               fontSize: 30,
                               color: Colors.black,
@@ -54,7 +66,7 @@ class _AccountresultState extends State<Accountresult> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            document['phone'],
+                            "Phone_No :    ${document['phone']}",
                             style: TextStyle(
                               fontSize: 30,
                               color: Colors.black,
@@ -68,7 +80,7 @@ class _AccountresultState extends State<Accountresult> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            document['email'],
+                            "E-mail :    ${document['email']}",
                             style: TextStyle(
                               fontSize: 30,
                               color: Colors.black,
@@ -82,7 +94,7 @@ class _AccountresultState extends State<Accountresult> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            document['dob'],
+                            "Dob :    ${document['dob']}",
                             style: TextStyle(
                               fontSize: 30,
                               color: Colors.black,
@@ -96,7 +108,7 @@ class _AccountresultState extends State<Accountresult> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            document['delivery1'],
+                            "Delivery address 1 :    ${document['delivery1']}",
                             style: TextStyle(
                               fontSize: 30,
                               color: Colors.black,
@@ -110,7 +122,7 @@ class _AccountresultState extends State<Accountresult> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            document['delivery2'],
+                            "Delivery address 2 :    ${document['delivery2']}",
                             style: TextStyle(
                               fontSize: 30,
                               color: Colors.black,
@@ -118,6 +130,9 @@ class _AccountresultState extends State<Accountresult> {
                           ),
                         ),
                       ),
+                    ),
+                    SizedBox(
+                      height: 80,
                     ),
                     RaisedButton(
                       onPressed: () {
@@ -126,14 +141,14 @@ class _AccountresultState extends State<Accountresult> {
                             MaterialPageRoute(
                                 builder: (context) => HomePagewithsign()));
                       },
-                      color: Colors.black,
+                      color: Colors.grey,
                       child: new Container(
                         height: 30,
                         width: 50,
                         child: Text(
                           "OK",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: 24,
                           ),
                         ),
