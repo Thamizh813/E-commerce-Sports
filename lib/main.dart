@@ -1,4 +1,3 @@
-import 'package:bat/addtocart.dart';
 import 'package:bat/clothes.dart';
 import 'package:bat/feed_body.dart';
 import 'package:bat/home/account.dart';
@@ -6,7 +5,7 @@ import 'package:bat/home/accountnamepage.dart';
 
 import 'package:bat/home/notificationtest.dart';
 import 'package:bat/home/outlet.dart';
-import 'package:bat/home/outlet70.dart';
+
 import 'package:bat/homewithsign/homwithsign.dart';
 
 import 'package:bat/yadava.dart';
@@ -83,7 +82,7 @@ class HomePage extends StatelessWidget {
         titleSpacing: -2.0,
         backgroundColor: Colors.black,
         elevation: 0.0,
-        title: new Text('Nike',
+        title: new Text('Nike Shopping',
             style: new TextStyle(
                 color: Colors.white,
                 fontStyle: FontStyle.normal,

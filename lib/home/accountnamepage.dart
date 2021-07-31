@@ -185,15 +185,16 @@ class _AccountState extends State<Account> {
                               })
                               .then((value) => print('details added'))
                               .catchError((error) => print('error in order'));
-                        }
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Accountresult()));
-                        if (_formKey.currentState!.validate()) {
-                          print('valid!');
-                        } else {
-                          print('invalid!');
+
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Accountresult()));
+                          if (_formKey.currentState!.validate()) {
+                            print('valid!');
+                          } else {
+                            print('invalid!');
+                          }
                         }
                       },
                       color: Colors.black,
